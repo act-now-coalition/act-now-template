@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@actnowcoalition/assert": "^1.0.0",
+    "@actnowcoalition/number-format": "^1.0.0",
+    "@actnowcoalition/regions": "^1.1.0",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",

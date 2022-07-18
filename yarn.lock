@@ -2,6 +2,24 @@
 # yarn lockfile v1
 
 
+"@actnowcoalition/assert@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/assert/-/assert-1.0.0.tgz#060686d3f81aefc5e2f23709c51d0236389104eb"
+  integrity sha512-LVu0iIEnl2tfCFWuynm7pXX6jtLiiD3o3vV5mJSdnKONOsGAWs7CW15tMj30SUrLHLP3zhHFFpu9Y/hXL/Flig==
+
+"@actnowcoalition/number-format@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/number-format/-/number-format-1.0.0.tgz#5460e7d1da666701441dc05d785cf2e8cd81e8d5"
+  integrity sha512-7rfsFQdWNNnp0yKHPGVtd4LAcQ8OJekWX1c0v+H5DkgSuJZPNws1Horq2IKW6BaiwFBk1rBBsLERU6rxklIIPQ==
+
+"@actnowcoalition/regions@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/regions/-/regions-1.1.0.tgz#8f5b65fc2c82c914c013f04e49ee4eedf957865b"
+  integrity sha512-N+K0Zn7RC8ANisixMHY5HGghrNVGsOX6Znr7eLaoBoyHbvolzvIIup+mRAkwkGrJFe/6xh0cH1sL/XUS+GpRQQ==
+  dependencies:
+    "@actnowcoalition/assert" "^1.0.0"
+    lodash "^4.17.21"
+
 "@babel/code-frame@^7.0.0":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
