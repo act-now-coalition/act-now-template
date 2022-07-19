@@ -1,28 +1,21 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { Container, Typography } from "@mui/material";
-import { states, Region } from "@actnowcoalition/regions";
+import { states, Region, RegionJSON } from "@actnowcoalition/regions";
 import { assert } from "@actnowcoalition/assert";
 import { formatInteger } from "@actnowcoalition/number-format";
 
-// TODO: Export RegionJSON from the @actnowcoalition/region
-export interface RegionJSON {
-  regionId: string;
-  fullName: string;
-  shortName: string;
-  abbreviation: string;
-  urlFragment: string;
-  parent: RegionJSON | null;
-  population: number;
-}
-
 const RegionPage: React.FC<{ regionJSON: RegionJSON }> = ({ regionJSON }) => {
+  if (!regionJSON) {
+    return null;
+  }
+
   const region = Region.fromJSON(regionJSON);
   return (
     <Container>
       <Typography variant="h1">{region.fullName}</Typography>
       <Typography variant="body2">
-        {formatInteger(region.population)}
+        Population: {formatInteger(region.population)}
       </Typography>
     </Container>
   );
@@ -58,9 +51,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
    * and `countyId` as URL params, so we need a way to find the county
    * using these 2 parameters.
    */
+
   const state = states.all.find((state) => state.urlFragment.includes(stateId));
   assert(state, `State by urlSegment not found: ${stateId}`);
-  return { props: state.toJSON() };
+  console.log({ rj: state.toJSON() });
+  return { props: { regionJSON: state.toJSON() } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
