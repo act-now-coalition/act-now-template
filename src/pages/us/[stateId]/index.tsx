@@ -54,7 +54,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   const state = states.all.find((state) => state.urlFragment.includes(stateId));
   assert(state, `State by urlSegment not found: ${stateId}`);
-  console.log({ rj: state.toJSON() });
   return { props: { regionJSON: state.toJSON() } };
 };
 
