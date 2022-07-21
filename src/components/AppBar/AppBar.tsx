@@ -4,7 +4,7 @@ import {
   Box
 } from "@mui/material";
 
-const AppBar: React.FC = () => {
+const AppBar: React.FC<{testProp?:any;}> = () => {
 
   return (
     <MuiAppBar position="sticky" >
