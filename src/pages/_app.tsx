@@ -5,6 +5,9 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache } from "@emotion/react";
 import createEmotionCache from "src/styles/createEmotionCache";
 import AppBar from "components/AppBar";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "src/styles/theme";
+import { globalStyles } from "src/styles";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -22,9 +25,11 @@ export default function MyApp(props: MyAppProps) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <CssBaseline />
-      <AppBar />
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <AppBar />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </CacheProvider>
   );
 }
