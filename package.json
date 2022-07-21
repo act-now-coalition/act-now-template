@@ -6,7 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --max-warnings=0",
+    "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -16,8 +21,13 @@
     "@mui/material": "^5.9.0",
     "@types/lodash": "^4.14.182",
     "@types/material-ui": "^0.21.12",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "lodash": "^4.17.21",
     "next": "12.2.2",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
