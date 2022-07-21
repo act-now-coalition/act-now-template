@@ -13,6 +13,8 @@ interface MyAppProps extends AppProps {
   emotionCache?: EmotionCache;
 }
 
+const a: any = 1;
+
 export default function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   return (
@@ -22,9 +24,9 @@ export default function MyApp(props: MyAppProps) {
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-        <CssBaseline />
-        <AppBar />
-        <Component {...pageProps} />
+      <CssBaseline />
+      <AppBar />
+      <Component {...pageProps} />
     </CacheProvider>
   );
 }
