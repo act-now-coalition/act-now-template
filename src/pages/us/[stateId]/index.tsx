@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { Container, Typography } from "@mui/material";
-import { states, Region, RegionJSON } from "@actnowcoalition/regions";
+import { states, Region, RegionJSON } from "@actnowcoalition/regions-test";
 import { assert } from "@actnowcoalition/assert";
 import { formatInteger } from "@actnowcoalition/number-format";
 

@@ -12,6 +12,14 @@
   resolved "https://registry.yarnpkg.com/@actnowcoalition/number-format/-/number-format-1.0.0.tgz#5460e7d1da666701441dc05d785cf2e8cd81e8d5"
   integrity sha512-7rfsFQdWNNnp0yKHPGVtd4LAcQ8OJekWX1c0v+H5DkgSuJZPNws1Horq2IKW6BaiwFBk1rBBsLERU6rxklIIPQ==
 
+"@actnowcoalition/regions-test@^1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/regions-test/-/regions-test-1.1.5.tgz#b6f8c5a890fe3ce097d0d4fe06d40ea8e2eafff5"
+  integrity sha512-aSrsTI938MvsdfYv7pQ44pkx86iwZ+JiPBNt0RJcEQ4cPCSJwIIz0qQaK8HSawzNoJLMR9ufWxsEhDnh54c/ig==
+  dependencies:
+    "@actnowcoalition/assert" "^1.0.0"
+    lodash "^4.17.21"
+
 "@actnowcoalition/regions@^1.1.5":
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/@actnowcoalition/regions/-/regions-1.1.5.tgz#724845a8e0179de9808c1bfae308147cd588ff07"
