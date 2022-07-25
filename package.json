@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "build:analyze": "ANALYZE=true yarn build",
     "lint": "next lint",
     "prepare": "husky install"
   },
@@ -32,6 +33,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "^12.2.3",
     "@types/node": "18.0.4",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
