@@ -1,4 +1,4 @@
-import { Toolbar, AppBar as MuiAppBar, Box } from "@mui/material";
+import { Toolbar, AppBar as MuiAppBar, Box } from '@mui/material';
 
 const AppBar: React.FC = () => {
   return (
