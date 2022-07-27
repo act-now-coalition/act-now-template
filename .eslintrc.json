@@ -8,6 +8,7 @@
     "next",
     "prettier"
   ],
+  "ignorePatterns": ["!.storybook"],
   "rules": {
     "@typescript-eslint/no-unnecessary-type-constraint": "off"
   }
