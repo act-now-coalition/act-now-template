@@ -6,6 +6,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import { Typography } from '@mui/material';
 
 const LocationPage: NextPage<{ regionJSON: RegionJSON }> = ({ regionJSON }) => {
+  // https://nextjs.org/docs/basic-features/data-fetching/get-static-props#statically-generates-both-html-and-json
   const region = Region.fromJSON(regionJSON);
 
   return (
@@ -24,12 +25,16 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { stateSlug, countySlug } = params as CountyPageProps;
 
   const county = counties.all.find(
-    county => county?.parent?.slug === stateSlug && county.slug === countySlug,
+    county =>
+      county.slug === countySlug &&
+      county.parent &&
+      county.parent.slug === stateSlug,
   );
 
-  assert(county, `County not found by slugs: ${stateSlug}, ${countySlug}`);
-
-  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+  assert(
+    county,
+    `County not found by slugs: stateSlug=${stateSlug}, countySlug=${countySlug}`,
+  );
   return { props: { regionJSON: county.toJSON() } };
 };
 
