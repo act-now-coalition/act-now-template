@@ -17,6 +17,7 @@
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "@actnowcoalition/regions": "^1.1.7",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.9",
+    "@next/bundle-analyzer": "^12.2.3",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.9",
     "@storybook/addon-interactions": "^6.5.9",
@@ -44,7 +46,6 @@
     "@storybook/manager-webpack5": "^6.5.9",
     "@storybook/react": "^6.5.9",
     "@storybook/testing-library": "^0.0.13",
-    "@next/bundle-analyzer": "^12.2.3",
     "@types/node": "18.0.4",
     "@types/react": "18.0.15",
     "@types/react-dom": "18.0.6",
