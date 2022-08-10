@@ -1,18 +1,10 @@
-const typographyConstants = {
-    fontFamily: "Arial",
-
-    fontWeightRegular: 400,
-    fontWeightMedium: 500,
-    fontWeightBold: 700,
-
-    fontSizeBase: "1rem",
-
-    lineHeightBase: 1.4,
-};
+const typographyConstants = {};
 
 const typography = {
-    fontFamily: typographyConstants.fontFamily,
-}
+  paragraphSmall: {
+    color: 'orange',
+  },
+};
 
 export { typographyConstants };
-export default typography
+export default typography;

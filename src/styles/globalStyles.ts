@@ -1,5 +1,4 @@
-import { css } from "@emotion/react";
-import palette from "./palette";
+import { css } from '@emotion/react';
 
 const globalStyles = css`
   html {
@@ -10,7 +9,6 @@ const globalStyles = css`
   }
 
   body {
-    background-color: ${palette.secondary.main};
     overflow-x: hidden;
   }
 `;
