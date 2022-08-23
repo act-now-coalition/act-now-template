@@ -10,7 +10,9 @@
     "lint": "next lint",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "run-script": "yarn ts-node-script",
+    "hello": "yarn run-script scripts/hello/index.ts"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --max-warnings=0",
@@ -53,6 +55,7 @@
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
     "eslint-plugin-storybook": "^0.6.1",
+    "ts-node": "^10.9.1",
     "typescript": "4.7.4"
   }
 }
