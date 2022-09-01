@@ -5,8 +5,8 @@ import {
 } from "@actnowcoalition/metrics";
 
 export enum MetricId {
-  MOCK_METRIC1 = "mock_metric1",
-  MOCK_METRIC2 = "mock_metric1",
+  METRIC1 = "metric1",
+  METRIC2 = "metric2",
 }
 
 const dataProviders = [
@@ -24,14 +24,14 @@ const dataProviders = [
 
 const metrics: MetricDefinition[] = [
   {
-    id: MetricId.MOCK_METRIC1,
+    id: MetricId.METRIC1,
     name: "Mock Metric 1",
     dataReference: {
       providerId: "mock",
     },
   },
   {
-    id: MetricId.MOCK_METRIC2,
+    id: MetricId.METRIC2,
     name: "Mock Metric 2",
     dataReference: {
       providerId: "mock",
