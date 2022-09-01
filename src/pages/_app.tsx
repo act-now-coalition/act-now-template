@@ -1,12 +1,14 @@
-import * as React from 'react';
-import Head from 'next/head';
-import { AppProps } from 'next/app';
-import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider, EmotionCache } from '@emotion/react';
-import createEmotionCache from 'src/styles/createEmotionCache';
-import AppBar from 'components/AppBar';
-import { ThemeProvider } from '@mui/material/styles';
-import theme from 'src/styles/theme';
+import * as React from "react";
+import Head from "next/head";
+import { AppProps } from "next/app";
+import CssBaseline from "@mui/material/CssBaseline";
+import { CacheProvider, EmotionCache } from "@emotion/react";
+import createEmotionCache from "src/styles/createEmotionCache";
+import AppBar from "components/AppBar";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "src/styles/theme";
+import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
+import { metricCatalog } from "src/utils/metrics";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -26,8 +28,10 @@ export default function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <AppBar />
-        <Component {...pageProps} />
+        <MetricCatalogProvider metricCatalog={metricCatalog}>
+          <AppBar />
+          <Component {...pageProps} />
+        </MetricCatalogProvider>
       </ThemeProvider>
     </CacheProvider>
   );

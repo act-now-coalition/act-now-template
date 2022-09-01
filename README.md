@@ -1,5 +1,20 @@
 # Act Now template
 
+## TODO
+
+To set up your Act Now website based on the template, you'll want to:
+
+- [ ] Set site-wide configuration options.
+  - [ ] Update title, meta tags, etc. in [src/pages/\_app.tsx](src/pages/_app.tsx).
+  - [ ] Customize theme (TBD).
+  - [ ] Update [public/favicon.ico](./public/favicon.ico)
+  - [ ] Set up analytics.
+- [ ] Set up regions in [utils/regions.ts](./utils/regions.ts).
+- [ ] Set up location pages and routing (TBD).
+- [ ] Set up metrics in [utils/metrics.ts](./utils/metrics.ts).
+- [ ] Customize home page in [screens/Homepage/Homepage.tsx](./screens/Homepage/Homepage.tsx).
+- [ ] Customize location pages (TBD).
+
 ## Getting Started
 
 This web application is based on [Next.js](https://nextjs.org/).
