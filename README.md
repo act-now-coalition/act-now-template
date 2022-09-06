@@ -28,10 +28,10 @@ To set up your Act Now website based on the template, you'll want to:
   - [ ] Update [public/favicon.ico](./public/favicon.ico)
   - [ ] Set up analytics.
 - [ ] Set up regions in [utils/regions.ts](./utils/regions.ts).
-- [ ] Set up location pages and routing (TBD).
+- [ ] Set up [routing.ts](./src/utils/routing.ts).
 - [ ] Set up metrics in [utils/metrics.ts](./utils/metrics.ts).
 - [ ] Customize home page in [screens/Homepage/Homepage.tsx](./screens/Homepage/Homepage.tsx).
-- [ ] Customize location pages (TBD).
+- [ ] Customize [location pages](./src/screens/Location/Location.tsx).
 
 ## Learn More
 
