@@ -15,6 +15,12 @@ export function getRegionFromSlugStrict(slug: string): Region {
   return region;
 }
 
+const LOCATION_PAGE_PREFIX = "us";
+
+/**
+ * The relative URL returned by this function must match the path of the
+ * [regionSlug]/index.tsx file.
+ */
 export function getRegionRelativeUrl(region: Region): string {
-  return `/us/${getRegionSlug(region)}`;
+  return `/${LOCATION_PAGE_PREFIX}/${getRegionSlug(region)}`;
 }
