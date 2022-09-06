@@ -3,6 +3,11 @@ import {
   MetricDefinition,
   MockDataProvider,
 } from "@actnowcoalition/metrics";
+import {
+  IncidenceFromCumulativesMetricDataProvider,
+  PopulationNormalizedDataProvider,
+  RollingAverageMetricDataProvider,
+} from "./metric-calculations";
 
 export enum MetricId {
   METRIC1 = "metric1",
@@ -11,6 +16,9 @@ export enum MetricId {
 
 const dataProviders = [
   new MockDataProvider(),
+  new IncidenceFromCumulativesMetricDataProvider(),
+  new RollingAverageMetricDataProvider(),
+  new PopulationNormalizedDataProvider(),
 
   // To import CSV data, copy it to public/data and uncomment / modify the
   // following lines:
@@ -37,6 +45,7 @@ const metrics: MetricDefinition[] = [
       providerId: "mock",
     },
   },
+
   // To create a metric using data from a CSV, uncomment / modify the following
   // lines:
   //
@@ -45,7 +54,35 @@ const metrics: MetricDefinition[] = [
   //   name: "ABC Metric",
   //   dataReference: {
   //     providerId: "xyz-csv",
-  //     column: "colunmn-name",
+  //     column: "column-name",
+  //   },
+  // },
+
+  // To use one of the metric calculations in metric-calculations.ts, uncomment
+  // / modify the following lines:
+  //
+  // {
+  //   id: MetricId.NEW_ABC
+  //   name: "New abc per day",
+  //   dataReference: {
+  //     providerId: "incidence-from-cumulatives",
+  //     sourceMetric: MetricId.ABC,
+  //   },
+  // },
+  // {
+  //   id: MetricId.AVERAGE_ABC,
+  //   name: "Average new abc per day",
+  //   dataReference: {
+  //     providerId: "rolling-average",
+  //     sourceMetric: MetricId.NEW_ABC
+  //   },
+  // },
+  // {
+  //   id: MetricId.AVERAGE_ABC_PER_100K,
+  //   name: "Average new abc per day per 100k population",
+  //   dataReference: {
+  //     providerId: "population-normalized",
+  //     sourceMetric: MetricId.AVERAGE_ABC,
   //   },
   // },
 ];
