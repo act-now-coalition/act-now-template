@@ -8,5 +8,8 @@ export default {
 
 const Template: ComponentStory<typeof AppBar> = (args) => <AppBar {...args} />;
 
-export const Example = Template.bind({});
-Example.args = {};
+export const ExampleWithPrimaryColor = Template.bind({});
+ExampleWithPrimaryColor.args = { color: "primary" };
+
+export const ExampleWithSecondaryColor = Template.bind({});
+ExampleWithSecondaryColor.args = { color: "secondary" };
