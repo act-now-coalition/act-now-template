@@ -87,4 +87,23 @@ const metrics: MetricDefinition[] = [
   // },
 ];
 
-export const metricCatalog = new MetricCatalog(metrics, dataProviders);
+export const metricCatalog = new MetricCatalog(metrics, dataProviders, {
+  // To create a metric level set(s), uncomment / modify the following lines, then set
+  // the levelSetId property of the metric(s) to the id of the desired level set (e.g. 'cases').
+  //
+  // metricLevelSets: [
+  //   {
+  //     id: "cases",
+  //     levels: [
+  //       { id: "low", name: "Low", color: "green" },
+  //       { id: "medium", name: "Medium", color: "orange" },
+  //       { id: "high", name: "High", color: "red" },
+  //     ],
+  //     defaultLevel: {
+  //       color: "grey",
+  //       id: "unknown",
+  //       name: "Unknown",
+  //     },
+  //   },
+  // ],
+});
