@@ -10,6 +10,7 @@
   ],
   "ignorePatterns": ["!.storybook"],
   "rules": {
-    "@typescript-eslint/no-unnecessary-type-constraint": "off"
+    "@typescript-eslint/no-unnecessary-type-constraint": "off",
+    "@next/next/no-img-element": "off"
   }
 }
