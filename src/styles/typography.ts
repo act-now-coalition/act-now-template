@@ -2,7 +2,7 @@ const typographyConstants = {};
 
 const typography = {
   paragraphSmall: {
-    color: 'orange',
+    color: "orange",
   },
 };
 

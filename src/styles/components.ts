@@ -6,7 +6,7 @@ const components = {
   MuiAppBar: {
     styleOverrides: {
       root: {
-        boxShadow: 'none',
+        boxShadow: "none",
       },
     },
   },
