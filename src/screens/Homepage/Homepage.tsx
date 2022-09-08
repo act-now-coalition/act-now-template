@@ -4,8 +4,7 @@ import Typography from "@mui/material/Typography";
 const Homepage: React.FC = () => {
   return (
     <Container>
-      Homepage
-      <Typography variant="paragraphSmall">Testing paragraph small</Typography>
+      <Typography variant="h1">Homepage</Typography>
     </Container>
   );
 };

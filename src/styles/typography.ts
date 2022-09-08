@@ -1,10 +1,6 @@
 const typographyConstants = {};
 
-const typography = {
-  paragraphSmall: {
-    color: "orange",
-  },
-};
+const typography = {};
 
 export { typographyConstants };
 export default typography;
