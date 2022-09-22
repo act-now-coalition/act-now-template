@@ -24,7 +24,7 @@
     "@actnowcoalition/number-format": "^1.1.1",
     "@actnowcoalition/regions": "^1.3.0",
     "@actnowcoalition/time-utils": "^1.1.2",
-    "@actnowcoalition/ui-components": "^1.5.14",
+    "@actnowcoalition/ui-components": "^0.2.1",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
