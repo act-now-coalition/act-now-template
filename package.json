@@ -8,6 +8,7 @@
     "start": "next start",
     "build:analyze": "ANALYZE=true yarn build",
     "lint": "next lint",
+    "ts-check": "tsc --project tsconfig.json",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
