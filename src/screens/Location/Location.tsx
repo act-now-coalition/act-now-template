@@ -10,6 +10,7 @@ export const Location: React.FC<{ region: Region }> = ({ region }) => {
         url={`/us/${region.shortName}`}
         title={`${region.shortName} Page`}
         description={`${region.shortName} Description`}
+        img={`/internal/share-image/${region.slug}/index.png`}
       />
       <Container>
         <Typography variant="h1">{region.shortName}</Typography>
