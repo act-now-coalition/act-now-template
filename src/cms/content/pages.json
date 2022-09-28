@@ -1,0 +1,13 @@
+{
+  "pages": [
+    {
+      "pageId": "location",
+      "microcopy": [
+        {
+          "microcopyId": "location.updated",
+          "microcopyContent": "Updated on"
+        }
+      ]
+    }
+  ]
+}

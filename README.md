@@ -23,7 +23,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 To set up your Act Now website based on the template, you'll want to:
 
 - [ ] Set site-wide configuration options.
-  - [ ] Update title, meta tags, etc. in [src/pages/\_app.tsx](src/pages/_app.tsx).
+  - [ ] CMS Setup
+    - [ ] Update the CMS configuration [public/admin/config.yml](./public/admin/config.yml)
+    - [ ] Run the CMS and update the site settings and page content
+  - [ ] Update title, meta tags, etc. in [src/pages/\_app.tsx](./src/pages/_app.tsx).
   - [ ] Customize theme (TBD).
   - [ ] Update [public/favicon.ico](./public/favicon.ico)
   - [ ] Set up analytics.

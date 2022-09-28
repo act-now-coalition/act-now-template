@@ -9,6 +9,7 @@
     "build:analyze": "ANALYZE=true yarn build",
     "lint": "next lint",
     "ts-check": "tsc --project tsconfig.json",
+    "local-cms": "npx netlify-cms-proxy-server",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",

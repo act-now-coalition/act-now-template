@@ -1,0 +1,50 @@
+backend:
+  name: git-gateway
+
+# To use the CMS locally during development, run (on separate terminals):
+#
+#    yarn dev
+#    yarn local-cms
+#
+# and then open http://localhost:3000/admin/index.html
+local_backend: true
+
+# Files uploaded through the CMS
+media_folder: public/cms/media
+
+# Path used to access the files in production
+public_folder: /cms/media
+
+collections:
+  - name: site
+    label: Site
+    files:
+      - name: settings
+        label: Settings
+        file: src/cms/content/settings.json
+        fields:
+          - name: siteName
+            label: Site Name
+          - name: siteUrl
+            label: Site URL
+  - name: pages
+    label: Pages
+    files:
+      - name: pages
+        label: Pages
+        file: src/cms/content/pages.json
+        fields:
+          - name: pages
+            label: Pages
+            widget: list
+            fields:
+              - name: pageId
+                label: Page ID
+              - name: microcopy
+                label: Microcopy
+                widget: list
+                fields:
+                  - name: microcopyId
+                    label: Microcopy ID
+                  - name: microcopyContent
+                    label: Microcopy Content
