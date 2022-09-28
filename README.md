@@ -25,7 +25,7 @@ To set up your Act Now website based on the template, you'll want to:
 - [ ] Set site-wide configuration options.
   - [ ] CMS Setup
     - [ ] Create the GitHub OAuth App
-    - [ ] Set env. variables in Vercel (OAUTH_CLIENT_ID and OAUTH_CLIENT_SECRET)
+    - [ ] Set env. variables in Vercel (`OAUTH_CLIENT_ID` and `OAUTH_CLIENT_SECRET`)
     - [ ] Create the `cms-content-entry` branch (from `develop`)
     - [ ] Update the CMS configuration [public/admin/config.yml](./public/admin/config.yml)
     - [ ] Open the CMS and update the content
