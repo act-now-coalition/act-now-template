@@ -10,10 +10,12 @@ export const Location: React.FC<{ region: Region }> = ({ region }) => {
     <>
       <PageMetaTags
         siteName="Act Now Location Page"
-        url={`/us/${region.shortName}`}
+        url={`/us/${region.slug}`}
         title={`${region.shortName} Page`}
         description={`${region.shortName} Description`}
         img={`${screenshotApiUrl}/https://${hostName}/internal/share-image/${region.slug}`}
+        imgWidth="1200"
+        imgHeight="630"
       />
       <Container>
         <Typography variant="h1">{region.shortName}</Typography>
