@@ -13,19 +13,20 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "run-script": "yarn ts-node-script",
-    "hello": "yarn run-script scripts/hello/index.ts"
+    "hello": "yarn run-script scripts/hello/index.ts",
+    "generate-data-snapshot": "yarn run-script scripts/data/generate-snapshot.ts"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --max-warnings=0",
     "*": "prettier --write --ignore-unknown"
   },
   "dependencies": {
-    "@actnowcoalition/assert": "^0.1.0",
-    "@actnowcoalition/metrics": "^0.1.0",
+    "@actnowcoalition/assert": "^0.1.1",
+    "@actnowcoalition/metrics": "^0.2.0",
     "@actnowcoalition/number-format": "^0.1.0",
-    "@actnowcoalition/regions": "^0.1.0",
+    "@actnowcoalition/regions": "^0.1.1",
     "@actnowcoalition/time-utils": "^0.1.0",
-    "@actnowcoalition/ui-components": "^0.1.0",
+    "@actnowcoalition/ui-components": "^0.3.0",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
