@@ -48,10 +48,10 @@
     "@types/luxon" "^2.3.2"
     luxon "^2.4.0"
 
-"@actnowcoalition/ui-components@^0.3.0":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.3.0.tgz#4a970b7beb0dbf67f0bad3857c8f84bece2c90c4"
-  integrity sha512-ZeZScikBm0MGe+7ncGYgdHc/u1VNckDSXjzOW/3VZa06yeU29F+srlMswjx1oXxrCeVHWfo8Z2vJuaxvMNew1A==
+"@actnowcoalition/ui-components@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.4.0.tgz#021c5420cdb37ea9ffe12708639004a3e1001c97"
+  integrity sha512-zbYRfza2mv2MeFYt0L5sHMN4pqhvinbXtzfRl1Kqyp6uCwwS1JCBJezjIX8KFXPA+wh2xY0KCjyPN9zH3yB75Q==
   dependencies:
     "@actnowcoalition/assert" "^0.1.0"
     "@actnowcoalition/metrics" "^0.2.0"
@@ -67,6 +67,7 @@
     "@types/topojson-client" "^3.1.1"
     "@visx/axis" "^2.12.2"
     "@visx/curve" "^2.1.0"
+    "@visx/event" "^2.6.0"
     "@visx/grid" "^2.12.2"
     "@visx/group" "^2.10.0"
     "@visx/responsive" "^2.10.0"
@@ -3369,6 +3370,14 @@
   dependencies:
     "@types/d3-shape" "^1.3.1"
     d3-shape "^1.0.6"
+
+"@visx/event@^2.6.0":
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/@visx/event/-/event-2.6.0.tgz#0718eb1efabd5305cf659a153779c94ba4038996"
+  integrity sha512-WGp91g82s727g3NAnENF1ppC3ZAlvWg+Y+GG0WFg34NmmOZbvPI/PTOqTqZE3x6B8EUn8NJiMxRjxIMbi+IvRw==
+  dependencies:
+    "@types/react" "*"
+    "@visx/point" "2.6.0"
 
 "@visx/grid@^2.12.2":
   version "2.12.2"
