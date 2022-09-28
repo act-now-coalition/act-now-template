@@ -8,6 +8,23 @@
           "microcopyContent": "Updated on"
         }
       ]
+    },
+    {
+      "pageId": "homepage",
+      "microcopy": [
+        {
+          "microcopyId": "title",
+          "microcopyContent": "U.S. COVID Tracker"
+        },
+        {
+          "microcopyId": "heading.title",
+          "microcopyContent": "COVID Community Risk Level"
+        },
+        {
+          "microcopyId": "heading.intro",
+          "microcopyContent": "Our new framework reflects the decreased risk of severe illness and death from COVID due to vaccines, therapeutics, and past COVID infections."
+        }
+      ]
     }
   ]
 }
