@@ -18,7 +18,7 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
       />
       <Container>
         <Typography variant="h1">{region.shortName}</Typography>
-        <Typography>{`${microcopy.get("location.updated")} DATE`}</Typography>
+        <Typography>{microcopy.get("heading.updated")}</Typography>
       </Container>
     </>
   );

@@ -4,8 +4,8 @@
       "pageId": "location",
       "microcopy": [
         {
-          "microcopyId": "location.updated",
-          "microcopyContent": "Updated on"
+          "microcopyId": "heading.updated",
+          "microcopyContent": "Updated on DATE"
         }
       ]
     },
@@ -14,15 +14,15 @@
       "microcopy": [
         {
           "microcopyId": "title",
-          "microcopyContent": "U.S. COVID Tracker"
+          "microcopyContent": "Act Now Tracker"
         },
         {
           "microcopyId": "heading.title",
-          "microcopyContent": "COVID Community Risk Level"
+          "microcopyContent": "Risk Levels"
         },
         {
           "microcopyId": "heading.intro",
-          "microcopyContent": "Our new framework reflects the decreased risk of severe illness and death from COVID due to vaccines, therapeutics, and past COVID infections."
+          "microcopyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta non."
         }
       ]
     }
