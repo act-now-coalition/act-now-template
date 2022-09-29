@@ -1,10 +1,21 @@
 import type { NextPage } from "next";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
+import { assert } from "@actnowcoalition/assert";
+import { Region } from "@actnowcoalition/regions";
 import { regions } from "src/utils/regions";
-import { getRegionFromSlugStrict, getRegionSlug } from "src/utils/routing";
+import { getRegionSlug } from "src/utils/routing";
 import { Location } from "src/screens/Location";
 import { cms, Page, PageJSON } from "src/cms";
+import keyBy from "lodash/keyBy";
+
+const regionsBySlug = keyBy(regions.all, getRegionSlug);
+
+export function getRegionFromSlugStrict(slug: string): Region {
+  const region = regionsBySlug[slug];
+  assert(region, `Region not found for slug ${slug}`);
+  return region;
+}
 
 const LocationPage: NextPage<{ regionId: string; pageJSON: PageJSON }> = ({
   regionId,
