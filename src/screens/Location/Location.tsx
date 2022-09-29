@@ -10,7 +10,7 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
 }) => {
   const screenshotApiUrl =
     "https://us-central1-test-url-api.cloudfunctions.net/api/dynamic-image";
-  const hostName = "act-now-template-95ktri6vr-covidactnow.vercel.app"; // FIX hardcoded url
+  // const hostName = "act-now-template-95ktri6vr-covidactnow.vercel.app"; // FIX hardcoded url
   const { microcopy } = page;
   return (
     <>
@@ -19,7 +19,7 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
         url={`/us/${region.slug}`}
         title={`${region.shortName} Page`}
         description={`${region.shortName} Description`}
-        img={`${screenshotApiUrl}/https://${hostName}/internal/share-image/${region.slug}`}
+        img={`${screenshotApiUrl}/https://covidactnow.org/internal/share-image/states/ma`}
         imgWidth="1200"
         imgHeight="630"
       />
