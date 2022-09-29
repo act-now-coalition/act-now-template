@@ -1,8 +1,13 @@
 import { Container, Typography } from "@mui/material";
 import { Region } from "@actnowcoalition/regions";
+import { Page } from "src/cms";
 import { PageMetaTags } from "components/SocialMetaTags";
 
-export const Location: React.FC<{ region: Region }> = ({ region }) => {
+export const Location: React.FC<{ region: Region; page: Page }> = ({
+  region,
+  page,
+}) => {
+  const { microcopy } = page;
   return (
     <>
       <PageMetaTags
@@ -13,6 +18,7 @@ export const Location: React.FC<{ region: Region }> = ({ region }) => {
       />
       <Container>
         <Typography variant="h1">{region.shortName}</Typography>
+        <Typography>{microcopy.get("heading.updated")}</Typography>
       </Container>
     </>
   );

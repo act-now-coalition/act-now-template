@@ -1,0 +1,30 @@
+{
+  "pages": [
+    {
+      "pageId": "location",
+      "microcopy": [
+        {
+          "microcopyId": "heading.updated",
+          "microcopyContent": "Updated on DATE"
+        }
+      ]
+    },
+    {
+      "pageId": "homepage",
+      "microcopy": [
+        {
+          "microcopyId": "title",
+          "microcopyContent": "Act Now Tracker"
+        },
+        {
+          "microcopyId": "heading.title",
+          "microcopyContent": "Risk Levels"
+        },
+        {
+          "microcopyId": "heading.intro",
+          "microcopyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta non."
+        }
+      ]
+    }
+  ]
+}
