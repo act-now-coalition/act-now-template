@@ -12,10 +12,10 @@
   resolved "https://registry.yarnpkg.com/@actnowcoalition/assert/-/assert-0.1.1.tgz#9552f6648405db8ed91cb0d8289bfe66e80e67ac"
   integrity sha512-rY1hrrBsiWqtCjYBDB9SUTXWpezsQy9gjegR4wmgIblmOmeqNaihKex8FBtyhWWiqaBd4syLaBbO6GTjdy4LCQ==
 
-"@actnowcoalition/metrics@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/metrics/-/metrics-0.2.0.tgz#28e156481bd4d0ecaac8f51f42ba0ce384d0a794"
-  integrity sha512-ohCbCUwD2tAABz/gzbX/omEMgn7Z4faz39ASatACb+jrc8QkFWmi+W5ckp0kgtHfp5hZFuUNebOvQTIbp54MWA==
+"@actnowcoalition/metrics@^0.2.1", "@actnowcoalition/metrics@^0.2.2":
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/metrics/-/metrics-0.2.2.tgz#46fb8434720d6ed2f3baf3a5ebd458354b6b7218"
+  integrity sha512-ueH74AB1calH601gVNYdcjpKMAfj7MmnxHQT0ra8d7p8vBgBdygzFeKy5hWd1IAp+ukFZb5XCE6DMzmc/QuoQw==
   dependencies:
     "@actnowcoalition/assert" "^0.1.0"
     "@actnowcoalition/number-format" "^0.1.0"
@@ -48,13 +48,13 @@
     "@types/luxon" "^2.3.2"
     luxon "^2.4.0"
 
-"@actnowcoalition/ui-components@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.4.0.tgz#021c5420cdb37ea9ffe12708639004a3e1001c97"
-  integrity sha512-zbYRfza2mv2MeFYt0L5sHMN4pqhvinbXtzfRl1Kqyp6uCwwS1JCBJezjIX8KFXPA+wh2xY0KCjyPN9zH3yB75Q==
+"@actnowcoalition/ui-components@^0.4.1":
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.4.1.tgz#5c8a14676d67e96f75a7310399f59e8d2a50400a"
+  integrity sha512-SeD4T05ip3ATELeM8tvaTABOrpZbSK0wcAU9eD3+ZcFBMYWGpJpe60HmFActrrXhBhprSYLF+39xl46gyR5SmA==
   dependencies:
     "@actnowcoalition/assert" "^0.1.0"
-    "@actnowcoalition/metrics" "^0.2.0"
+    "@actnowcoalition/metrics" "^0.2.1"
     "@actnowcoalition/number-format" "^0.1.0"
     "@actnowcoalition/regions" "^0.1.1"
     "@emotion/react" "^11.9.3"
@@ -5579,16 +5579,12 @@ damerau-levenshtein@^1.0.8:
   resolved "https://registry.yarnpkg.com/damerau-levenshtein/-/damerau-levenshtein-1.0.8.tgz#b43d286ccbd36bc5b2f7ed41caf2d0aba1f8a6e7"
   integrity sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==
 
-<<<<<<< HEAD
 date-fns@^2.9.0:
   version "2.29.3"
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.29.3.tgz#27402d2fc67eb442b511b70bbdf98e6411cd68a8"
   integrity sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==
 
-debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
-=======
 debug@2.6.9, debug@^2.1.3, debug@^2.2.0, debug@^2.3.3, debug@^2.6.0, debug@^2.6.9:
->>>>>>> develop
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
   integrity sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
