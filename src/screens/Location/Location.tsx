@@ -19,7 +19,7 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
         url={`/us/${region.slug}`}
         title={`${region.shortName} Page`}
         description={`${region.shortName} Description`}
-        img={`${screenshotApiUrl}/https://covidactnow.org/internal/share-image/states/ma`}
+        img={`${screenshotApiUrl}/https://covidactnow.org/internal/share-image/states/ma.png`}
         imgWidth="1200"
         imgHeight="630"
       />
