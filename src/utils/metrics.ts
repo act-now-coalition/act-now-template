@@ -2,20 +2,24 @@ import {
   MetricCatalog,
   MetricDefinition,
   MockDataProvider,
+  StaticValueDataProvider,
 } from "@actnowcoalition/metrics";
 import {
   IncidenceFromCumulativesMetricDataProvider,
   PopulationNormalizedDataProvider,
   RollingAverageMetricDataProvider,
 } from "./metric-calculations";
+import DataSnapshotJSON from "../assets/data/data-snapshot.json";
 
 export enum MetricId {
+  PI = "pi",
   METRIC1 = "metric1",
   METRIC2 = "metric2",
 }
 
-const dataProviders = [
+export const dataProviders = [
   new MockDataProvider(),
+  new StaticValueDataProvider(),
   new IncidenceFromCumulativesMetricDataProvider(),
   new RollingAverageMetricDataProvider(),
   new PopulationNormalizedDataProvider(),
@@ -30,7 +34,15 @@ const dataProviders = [
   // }),
 ];
 
-const metrics: MetricDefinition[] = [
+export const metrics: MetricDefinition[] = [
+  {
+    id: MetricId.PI,
+    name: "Pi",
+    dataReference: {
+      providerId: "static",
+      value: Math.PI,
+    },
+  },
   {
     id: MetricId.METRIC1,
     name: "Mock Metric 1",
@@ -87,23 +99,26 @@ const metrics: MetricDefinition[] = [
   // },
 ];
 
-export const metricCatalog = new MetricCatalog(metrics, dataProviders, {
+export const metricLevelSets = [
   // To create a metric level set(s), uncomment / modify the following lines, then set
   // the levelSetId property of the metric(s) to the id of the desired level set (e.g. 'cases').
   //
-  // metricLevelSets: [
-  //   {
-  //     id: "cases",
-  //     levels: [
-  //       { id: "low", name: "Low", color: "green" },
-  //       { id: "medium", name: "Medium", color: "orange" },
-  //       { id: "high", name: "High", color: "red" },
-  //     ],
-  //     defaultLevel: {
-  //       color: "grey",
-  //       id: "unknown",
-  //       name: "Unknown",
-  //     },
+  // {
+  //   id: "cases",
+  //   levels: [
+  //     { id: "low", name: "Low", color: "green" },
+  //     { id: "medium", name: "Medium", color: "orange" },
+  //     { id: "high", name: "High", color: "red" },
+  //   ],
+  //   defaultLevel: {
+  //     color: "grey",
+  //     id: "unknown",
+  //     name: "Unknown",
   //   },
-  // ],
+  // },
+];
+
+export const metricCatalog = new MetricCatalog(metrics, dataProviders, {
+  metricLevelSets,
+  snapshot: DataSnapshotJSON,
 });

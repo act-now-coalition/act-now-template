@@ -1,14 +1,17 @@
 import { Container, Typography } from "@mui/material";
 import { Region } from "@actnowcoalition/regions";
+import { Page } from "src/cms";
 import { PageMetaTags } from "components/SocialMetaTags";
 // import { useState, useEffect } from "react";
 
-export const Location: React.FC<{ region: Region }> = ({ region }) => {
+export const Location: React.FC<{ region: Region; page: Page }> = ({
+  region,
+  page,
+}) => {
   const screenshotApiUrl =
     "https://us-central1-test-url-api.cloudfunctions.net/api/dynamic-image";
   const hostName = "act-now-template-95ktri6vr-covidactnow.vercel.app"; // FIX hardcoded url
-  // const hostName = useHostName();
-  console.log("host: ", hostName);
+  const { microcopy } = page;
   return (
     <>
       <PageMetaTags
@@ -22,6 +25,7 @@ export const Location: React.FC<{ region: Region }> = ({ region }) => {
       />
       <Container>
         <Typography variant="h1">{region.shortName}</Typography>
+        <Typography>{microcopy.get("heading.updated")}</Typography>
       </Container>
     </>
   );

@@ -1,14 +1,28 @@
 import type { NextPage } from "next";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { RegionJSON, Region } from "@actnowcoalition/regions";
+import { assert } from "@actnowcoalition/assert";
+import { Region } from "@actnowcoalition/regions";
 import { regions } from "src/utils/regions";
-import { getRegionFromSlugStrict, getRegionSlug } from "src/utils/routing";
+import { getRegionSlug } from "src/utils/routing";
 import { Location } from "src/screens/Location";
+import { cms, Page, PageJSON } from "src/cms";
+import keyBy from "lodash/keyBy";
 
-const LocationPage: NextPage<{ regionJSON: RegionJSON }> = ({ regionJSON }) => {
-  const region = Region.fromJSON(regionJSON);
-  return <Location region={region} />;
+const regionsBySlug = keyBy(regions.all, getRegionSlug);
+
+export function getRegionFromSlugStrict(slug: string): Region {
+  const region = regionsBySlug[slug];
+  assert(region, `Region not found for slug ${slug}`);
+  return region;
+}
+
+const LocationPage: NextPage<{ regionId: string; pageJSON: PageJSON }> = ({
+  regionId,
+  pageJSON,
+}) => {
+  const region = regions.findByRegionIdStrict(regionId);
+  return <Location region={region} page={Page.fromJSON(pageJSON)} />;
 };
 
 interface RegionPageSlug extends ParsedUrlQuery {
@@ -18,7 +32,8 @@ interface RegionPageSlug extends ParsedUrlQuery {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { regionSlug } = params as RegionPageSlug;
   const region = getRegionFromSlugStrict(regionSlug);
-  return { props: { regionJSON: region.toJSON() } };
+  const page = cms.getPageById("location");
+  return { props: { regionId: region.regionId, pageJSON: page.toJSON() } };
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
