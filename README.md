@@ -36,7 +36,7 @@ To set up your Act Now website based on the template, you'll want to:
 
 ### CMS Setup
 
-This template comes pre-configured to use [Netlify CMS](https://www.netlifycms.org/) as Content Management System, with GitHub as as authentication provider.
+This template comes pre-configured to use [Netlify CMS](https://www.netlifycms.org/) as Content Management System, with GitHub as an authentication provider.
 
 Using GitHub to authenticate CMS users requires a server handling the authentication flow. We use [Vercel](https://vercel.com/) serverless functions to handle the authentication flow. See [`src/pages/api/auth.js`](./src/pages/api/auth.js) and [`src/pages/api/callback.js`](./src/pages/api/callback.js).
 
@@ -49,7 +49,7 @@ Using GitHub to authenticate CMS users requires a server handling the authentica
 
    Upon creating the app, you will get the _Client ID_ of the GitHub OAuth App. You will also need to create a _Client secret_ before the next step (the client secret can only be seen once, make sure to store it securely).
 
-2. Go to the project in Vercel. Go to _Settings → Environment Variables_ and create the following environment variables (for the _Preview_ environment if you use `develop` to edit the CMS content).
+2. Go to the project in Vercel. Go to _Settings → Environment Variables_ and create the following environment variables (for the _Production_ environment if you use `develop` to edit the CMS content).
 
    ```env
    ORIGIN=act-now-template.vercel.app
@@ -58,7 +58,7 @@ Using GitHub to authenticate CMS users requires a server handling the authentica
    OAUTH_CLIENT_SECRET=xxxx
    ```
 
-3. Update the CMS configuration, making sure to point to your repository and to the branch that you want to use as preview.
+3. Update the [CMS configuration](./public/admin/config.yml), making sure to point to your repository and to the branch that you want to use as preview.
 
    ```yml
    backend:
