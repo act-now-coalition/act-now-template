@@ -63,4 +63,5 @@ collections:
                   - name: microcopyId
                     label: Microcopy ID
                   - name: microcopyContent
+                    widget: text
                     label: Microcopy Content
