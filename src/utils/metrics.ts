@@ -3,7 +3,6 @@ import {
   MetricDefinition,
   MockDataProvider,
   StaticValueDataProvider,
-  CovidActNowDataProvider,
 } from "@actnowcoalition/metrics";
 import {
   IncidenceFromCumulativesMetricDataProvider,
@@ -11,14 +10,11 @@ import {
   RollingAverageMetricDataProvider,
 } from "./metric-calculations";
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
-// import theme from "../styles/theme";
 
 export enum MetricId {
   PI = "pi",
   METRIC1 = "metric1",
   METRIC2 = "metric2",
-
-  BEDS_WITH_COVID_PATIENTS_RATIO = "weekly_new_cases_per_100k",
 }
 
 export const dataProviders = [
@@ -27,8 +23,6 @@ export const dataProviders = [
   new IncidenceFromCumulativesMetricDataProvider(),
   new RollingAverageMetricDataProvider(),
   new PopulationNormalizedDataProvider(),
-
-  new CovidActNowDataProvider("ed76437aca7344359200d333e1a9de80"),
 
   // To import CSV data, copy it to public/data and uncomment / modify the
   // following lines:
@@ -61,17 +55,6 @@ export const metrics: MetricDefinition[] = [
     name: "Mock Metric 2",
     dataReference: {
       providerId: "mock",
-    },
-  },
-
-  {
-    id: MetricId.BEDS_WITH_COVID_PATIENTS_RATIO,
-    levelSetId: "risk-levels-3-colors",
-    thresholds: [0.1, 0.15],
-    name: "Patients w/ COVID (% of all beds)",
-    dataReference: {
-      providerId: "covid-act-now-api",
-      column: "metrics.bedsWithCovidPatientsRatio",
     },
   },
 
@@ -133,20 +116,6 @@ export const metricLevelSets = [
   //     name: "Unknown",
   //   },
   // },
-
-  {
-    id: "risk-levels-3-colors",
-    levels: [
-      { id: "low", name: "Low", color: "red" },
-      { id: "medium", name: "Medium", color: "orange" },
-      { id: "high", name: "High", color: "yellow" },
-    ],
-    defaultLevel: {
-      color: "grey",
-      id: "unknown",
-      name: "Unknown",
-    },
-  },
 ];
 
 export const metricCatalog = new MetricCatalog(metrics, dataProviders, {
