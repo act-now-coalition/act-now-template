@@ -45,7 +45,7 @@ const MetricsDirectory: NextPage = () => {
                       JSON
                     </AccordionSummary>
                     <AccordionDetails>
-                      {JSON.stringify(metric)}
+                      <pre>{JSON.stringify(metric, null, 2)}</pre>
                     </AccordionDetails>
                   </Accordion>
                 </Stack>
