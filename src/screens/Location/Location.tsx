@@ -7,14 +7,14 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
   region,
   page,
 }) => {
-  const { microcopy } = page;
+  const { microcopy, metaTags } = page;
   return (
     <>
       <PageMetaTags
         siteName="Act Now Location Page"
         url={`/us/${region.shortName}`}
-        title={`${region.shortName} Page`}
-        description={`${region.shortName} Description`}
+        title={`${region.shortName.concat(" ", metaTags.title)}`}
+        description={`${region.shortName.concat(" ", metaTags.description)}`}
       />
       <Container>
         <Typography variant="h1">{region.shortName}</Typography>

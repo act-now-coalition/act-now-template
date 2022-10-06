@@ -9,8 +9,8 @@
         }
       ],
       "metaTags": {
-        "title": "Homepage title",
-        "description": "Homepage description",
+        "title": "location page",
+        "description": "location page description",
         "socialImg": "https://picsum.photos/200/300",
         "imgSize": "200"
       }
@@ -32,8 +32,8 @@
         }
       ],
       "metaTags": {
-        "title": "Location page title",
-        "description": "Location page description",
+        "title": "Homepage title",
+        "description": "Homepage description",
         "socialImg": "https://picsum.photos/200/300",
         "imgSize": "200"
       }
