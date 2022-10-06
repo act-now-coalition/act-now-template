@@ -7,7 +7,13 @@
           "microcopyId": "heading.updated",
           "microcopyContent": "Updated on DATE"
         }
-      ]
+      ],
+      "metaTags": {
+        "title": "Homepage title",
+        "description": "Homepage description",
+        "socialImg": "https://picsum.photos/200/300",
+        "imgSize": "200"
+      }
     },
     {
       "pageId": "homepage",
@@ -24,7 +30,13 @@
           "microcopyId": "heading.intro",
           "microcopyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta non."
         }
-      ]
+      ],
+      "metaTags": {
+        "title": "Location page title",
+        "description": "Location page description",
+        "socialImg": "https://picsum.photos/200/300",
+        "imgSize": "200"
+      }
     }
   ]
 }
