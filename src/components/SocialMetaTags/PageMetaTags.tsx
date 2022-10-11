@@ -6,10 +6,10 @@ export interface PageMetaTagsProps {
   url: string;
   title: string;
   description: string;
-  img?: string;
-  imgWidth?: string;
-  imgHeight?: string;
-  imgType?: string;
+  socialImg?: string;
+  socialImgWidth?: string;
+  socialImgHeight?: string;
+  socialImgType?: string;
 }
 
 export const PageMetaTags: React.FC<PageMetaTagsProps> = ({
@@ -17,10 +17,10 @@ export const PageMetaTags: React.FC<PageMetaTagsProps> = ({
   url,
   title,
   description,
-  img,
-  imgWidth,
-  imgHeight,
-  imgType = "image/png",
+  socialImg,
+  socialImgWidth = "1200",
+  socialImgHeight = "630",
+  socialImgType = "image/png",
 }) => {
   return (
     <Head>
@@ -32,12 +32,12 @@ export const PageMetaTags: React.FC<PageMetaTagsProps> = ({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      {img && imgWidth && imgHeight && (
+      {socialImg && (
         <>
-          <meta property="og:image:url" content={img} />
-          <meta property="og:image:width" content={imgWidth} />
-          <meta property="og:image:height" content={imgHeight} />
-          <meta property="og:image:type" content={imgType} />
+          <meta property="og:image:url" content={socialImg} />
+          <meta property="og:image:width" content={socialImgWidth} />
+          <meta property="og:image:height" content={socialImgHeight} />
+          <meta property="og:image:type" content={socialImgType} />
         </>
       )}
       <meta name="twitter:title" content={title} />

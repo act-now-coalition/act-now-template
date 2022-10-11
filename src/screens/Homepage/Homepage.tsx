@@ -4,14 +4,17 @@ import { cms, Page } from "src/cms";
 import { PageMetaTags } from "components/SocialMetaTags";
 
 const Homepage: React.FC<{ page: Page }> = ({ page }) => {
-  const { microcopy } = page;
+  const { microcopy, metaTags } = page;
   return (
     <>
       <PageMetaTags
         siteName={cms.settings.siteName}
         url={cms.settings.siteUrl}
-        title="Homepage"
-        description="Homepage description"
+        title={metaTags.title}
+        description={metaTags.description}
+        socialImg={metaTags.socialImg}
+        socialImgWidth={metaTags.socialImgWidth}
+        socialImgHeight={metaTags.socialImgHeight}
       />
       <Container>
         <Typography variant="h1">{microcopy.get("title")}</Typography>
