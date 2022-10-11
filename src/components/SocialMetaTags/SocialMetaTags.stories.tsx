@@ -21,9 +21,7 @@ PageMetaTagsExample.args = {
   url: "https://www.covidactnow.org",
   title: "Sample title",
   description: "Sample description",
-  img: "https://covidactnow-prod.web.app/share/3995-2743/home.png",
-  imgWidth: "1200",
-  imgHeight: "630",
+  socialImg: "https://covidactnow-prod.web.app/share/3995-2743/home.png",
 };
 
 const FacebookMetaTagsTemplate: ComponentStory<typeof FacebookMetaTags> = (

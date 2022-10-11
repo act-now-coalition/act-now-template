@@ -12,6 +12,9 @@ const Homepage: React.FC<{ page: Page }> = ({ page }) => {
         url={cms.settings.siteUrl}
         title={metaTags.title}
         description={metaTags.description}
+        socialImg={metaTags.socialImg}
+        socialImgWidth={metaTags.socialImgWidth}
+        socialImgHeight={metaTags.socialImgHeight}
       />
       <Container>
         <Typography variant="h1">{microcopy.get("title")}</Typography>

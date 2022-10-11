@@ -2,32 +2,34 @@ export interface MetaTagsJSON {
   title: string;
   description: string;
   socialImg?: string;
-  imgSize?: string;
+  socialImgWidth?: string;
+  socialImgHeight?: string;
 }
 
 export class MetaTags {
-  constructor(
-    public readonly title: string,
-    public readonly description: string,
-    public readonly socialImg?: string,
-    public readonly imgSize?: string
-  ) {}
+  constructor(public readonly json: MetaTagsJSON) {}
 
-  static fromJSON(metaTagsJSON: MetaTagsJSON): MetaTags {
-    return new MetaTags(
-      metaTagsJSON.title,
-      metaTagsJSON.description,
-      metaTagsJSON.socialImg,
-      metaTagsJSON.imgSize
-    );
+  static fromJSON(json: MetaTagsJSON): MetaTags {
+    return new MetaTags(json);
   }
 
-  toJSON(): MetaTagsJSON {
-    return {
-      title: this.title,
-      description: this.description,
-      socialImg: this.socialImg,
-      imgSize: this.imgSize,
-    };
+  get title() {
+    return this.json.title;
+  }
+  get description() {
+    return this.json.description;
+  }
+  get socialImg() {
+    return this.json.socialImg;
+  }
+  get socialImgWidth() {
+    return this.json.socialImgWidth;
+  }
+  get socialImgHeight() {
+    return this.json.socialImgHeight;
+  }
+
+  toJSON() {
+    return this.json;
   }
 }
