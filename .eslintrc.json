@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "lodash"],
   "extends": [
     "next/core-web-vitals",
     "eslint:recommended",
@@ -11,6 +11,8 @@
   "ignorePatterns": ["!.storybook"],
   "rules": {
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
-    "@next/next/no-img-element": "off"
+    "@next/next/no-img-element": "off",
+    "prefer-const": "off",
+    "lodash/import-scope": "warn"
   }
 }
