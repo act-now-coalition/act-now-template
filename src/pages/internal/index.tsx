@@ -7,7 +7,7 @@ import {
   ListItem,
   Typography,
 } from "@mui/material";
-import { PageMetaTags } from "src/components/SocialMetaTags";
+import { PageMetaTags } from "../../components/SocialMetaTags";
 
 const InternalHome: NextPage = () => {
   return (
