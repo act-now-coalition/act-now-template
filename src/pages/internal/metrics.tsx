@@ -15,7 +15,7 @@ import {
 } from "@mui/material";
 import { useMetricCatalog } from "@actnowcoalition/ui-components";
 import { Metric } from "@actnowcoalition/metrics";
-import { PageMetaTags } from "components/SocialMetaTags";
+import { PageMetaTags } from "src/components/SocialMetaTags";
 import { MetricId } from "src/utils/metrics";
 
 const MetricsDirectory: NextPage = () => {
