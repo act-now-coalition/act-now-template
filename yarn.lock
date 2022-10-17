@@ -12,13 +12,13 @@
   resolved "https://registry.yarnpkg.com/@actnowcoalition/assert/-/assert-0.1.1.tgz#9552f6648405db8ed91cb0d8289bfe66e80e67ac"
   integrity sha512-rY1hrrBsiWqtCjYBDB9SUTXWpezsQy9gjegR4wmgIblmOmeqNaihKex8FBtyhWWiqaBd4syLaBbO6GTjdy4LCQ==
 
-"@actnowcoalition/metrics@^0.2.1", "@actnowcoalition/metrics@^0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/metrics/-/metrics-0.2.2.tgz#46fb8434720d6ed2f3baf3a5ebd458354b6b7218"
-  integrity sha512-ueH74AB1calH601gVNYdcjpKMAfj7MmnxHQT0ra8d7p8vBgBdygzFeKy5hWd1IAp+ukFZb5XCE6DMzmc/QuoQw==
+"@actnowcoalition/metrics@^0.2.4":
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/metrics/-/metrics-0.2.4.tgz#b65e506769bee33d64aac1593d705b6386f23291"
+  integrity sha512-h125oR5MLAv4kmN/qglxHdiZVxD40wKwCGz8Dft4Fb2DV4l9mBHnuHsCXjGq7U5QziiGZggADW4ZlC+v0Jc9sg==
   dependencies:
     "@actnowcoalition/assert" "^0.1.0"
-    "@actnowcoalition/number-format" "^0.1.0"
+    "@actnowcoalition/number-format" "^0.1.1"
     "@actnowcoalition/regions" "^0.1.1"
     "@actnowcoalition/time-utils" "^0.1.0"
     "@types/papaparse" "^5.3.3"
@@ -26,10 +26,10 @@
     node-fetch "^2.6.7"
     papaparse "^5.3.2"
 
-"@actnowcoalition/number-format@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/number-format/-/number-format-0.1.0.tgz#0d6bf419c6e9f5622fe8cde7940f68ea0fdb5320"
-  integrity sha512-BTdtEEqgV0zRk6sj2E/XU5j7tSiR/cE0sOVmISGW9pz58WNLVcFraIUH5XSArfzh7WLnWlsh5N+rJDgUoVsG/A==
+"@actnowcoalition/number-format@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/number-format/-/number-format-0.1.1.tgz#d80e6fc9d0223f7500af390e4812fbdecc966d8e"
+  integrity sha512-NgArNpGeHAE5uil+MEkkKjsCGfXi2sPosRkIDF6lodVjTzWzq1e+7yAw9VD7pmi2qPgJxPw25TrOH/UTuNHIkw==
 
 "@actnowcoalition/regions@^0.1.1":
   version "0.1.1"
@@ -48,14 +48,14 @@
     "@types/luxon" "^2.3.2"
     luxon "^2.4.0"
 
-"@actnowcoalition/ui-components@^0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.4.1.tgz#5c8a14676d67e96f75a7310399f59e8d2a50400a"
-  integrity sha512-SeD4T05ip3ATELeM8tvaTABOrpZbSK0wcAU9eD3+ZcFBMYWGpJpe60HmFActrrXhBhprSYLF+39xl46gyR5SmA==
+"@actnowcoalition/ui-components@^0.5.2":
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.5.2.tgz#54ef8914446994ec8cfe0f1ba9f7cd07841d6fad"
+  integrity sha512-JTr5UOLgwWoyYyGDMiLg1EH3wsrLYIWM3ep2GXyVMaO4VmbU++b/6Qncyb124q7r2dc1+1lMhNsGQLCFt2qAmw==
   dependencies:
     "@actnowcoalition/assert" "^0.1.0"
-    "@actnowcoalition/metrics" "^0.2.1"
-    "@actnowcoalition/number-format" "^0.1.0"
+    "@actnowcoalition/metrics" "^0.2.4"
+    "@actnowcoalition/number-format" "^0.1.1"
     "@actnowcoalition/regions" "^0.1.1"
     "@emotion/react" "^11.9.3"
     "@emotion/styled" "^11.9.3"
@@ -73,6 +73,7 @@
     "@visx/responsive" "^2.10.0"
     "@visx/scale" "^2.2.2"
     "@visx/shape" "^2.12.2"
+    "@visx/voronoi" "^2.10.0"
     d3-geo "^2.0.2"
     d3-scale-chromatic "^3.0.0"
     geo-albers-usa-territories "^0.1.0"
@@ -2956,6 +2957,11 @@
   resolved "https://registry.yarnpkg.com/@types/d3-time/-/d3-time-2.1.1.tgz#743fdc821c81f86537cbfece07093ac39b4bc342"
   integrity sha512-9MVYlmIgmRR31C5b4FVSWtuMmBHh2mOWQYfl7XAYOa8dsnb7iEmUmRSWSFgXFtkjxO65d7hTUHQC+RhR/9IWFg==
 
+"@types/d3-voronoi@^1.1.9":
+  version "1.1.9"
+  resolved "https://registry.yarnpkg.com/@types/d3-voronoi/-/d3-voronoi-1.1.9.tgz#7bbc210818a3a5c5e0bafb051420df206617c9e5"
+  integrity sha512-DExNQkaHd1F3dFPvGA/Aw2NGyjMln6E9QzsiqOcBgnE+VInYnFBHBBySbZQts6z6xD+5jTfKCP7M4OqMyVjdwQ==
+
 "@types/d3-zoom@^1":
   version "1.8.3"
   resolved "https://registry.yarnpkg.com/@types/d3-zoom/-/d3-zoom-1.8.3.tgz#00237900c6fdc2bb4fe82679ee4d74eb8fbe7b3c"
@@ -3518,6 +3524,17 @@
     lodash "^4.17.21"
     prop-types "^15.7.2"
     reduce-css-calc "^1.3.0"
+
+"@visx/voronoi@^2.10.0":
+  version "2.10.0"
+  resolved "https://registry.yarnpkg.com/@visx/voronoi/-/voronoi-2.10.0.tgz#2a81b7d00c1eb6c10e6537c107a3c49f625f1364"
+  integrity sha512-2GSosmQ25a9OctY4xPpPTwY6N4CW53Ssos8kzPHTo5Si/2h9AUNqVg7eGUb8lrEjakQYAAdX0J4U8D02tsQI+w==
+  dependencies:
+    "@types/d3-voronoi" "^1.1.9"
+    "@types/react" "*"
+    classnames "^2.3.1"
+    d3-voronoi "^1.1.2"
+    prop-types "^15.6.1"
 
 "@webassemblyjs/ast@1.11.1":
   version "1.11.1"
@@ -5562,6 +5579,11 @@ d3-transition@2:
     d3-ease "1 - 2"
     d3-interpolate "1 - 2"
     d3-timer "1 - 2"
+
+d3-voronoi@^1.1.2:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/d3-voronoi/-/d3-voronoi-1.1.4.tgz#dd3c78d7653d2bb359284ae478645d95944c8297"
+  integrity sha512-dArJ32hchFsrQ8uMiTBLq256MpnZjeuBtdHpaDlYuQyjU0CVzCJl/BVW+SkszaAeH95D/8gxqAhgx0ouAWAfRg==
 
 d3-zoom@^2.0.0:
   version "2.0.0"
