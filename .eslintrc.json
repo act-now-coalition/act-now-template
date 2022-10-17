@@ -12,7 +12,6 @@
   "rules": {
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
     "@next/next/no-img-element": "off",
-    "prefer-const": "off",
     "lodash/import-scope": "warn"
   }
 }

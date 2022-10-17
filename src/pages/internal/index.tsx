@@ -8,12 +8,13 @@ import {
   Typography,
 } from "@mui/material";
 import { PageMetaTags } from "../../components/SocialMetaTags";
+import { cms } from "../../cms";
 
 const InternalHome: NextPage = () => {
   return (
     <>
       <PageMetaTags
-        siteName="Act Now Template"
+        siteName={cms.settings.siteName}
         title="Internal Home"
         description="Directory of internal pages"
         url="/internal"

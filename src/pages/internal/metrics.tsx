@@ -17,6 +17,7 @@ import { useMetricCatalog } from "@actnowcoalition/ui-components";
 import { Metric } from "@actnowcoalition/metrics";
 import { PageMetaTags } from "../../components/SocialMetaTags";
 import { MetricId } from "src/utils/metrics";
+import { cms } from "../../cms";
 
 const MetricsDirectory: NextPage = () => {
   const metricCatalog = useMetricCatalog();
@@ -24,7 +25,7 @@ const MetricsDirectory: NextPage = () => {
   return (
     <>
       <PageMetaTags
-        siteName="Act Now Template"
+        siteName={cms.settings.siteName}
         title="Metrics"
         description="Directory of available metrics"
         url="/internal/metrics"
