@@ -21,7 +21,6 @@ const {{pascalCase name}}SharePage: NextPage = () => {
   if (!params) {
     return <span>Page loading or no query params were provided...</span>;
   }
-
   const { {{queryParams}} } = params;
   // Add an assertion that expected URL query params exist here.
 
@@ -39,12 +38,19 @@ const {{pascalCase name}}SharePage: NextPage = () => {
   );
 };
 export default {{pascalCase name}}SharePage;
- `);
+`);
+
+const templateSharePageListItem = prepareTemplate(`
+          <ListItem>
+            <Link href="/internal/share-image/{{pascalCase name}}SharePage?">{{name}}</Link>
+          </ListItem>
+          $1`);
 
 export default function (/** @type {import('plop').NodePlopAPI} */ plop) {
-  const shareImagePagePath = "src/pages/internal/share-image";
+  const internalPagePath = "src/pages/internal";
   plop.setGenerator("share-page", {
-    description: "Creates a component module with stories, styles and index.",
+    description:
+      "Creates a share page with given name and URL query parameters.",
     prompts: [
       {
         type: "input",
@@ -55,15 +61,21 @@ export default function (/** @type {import('plop').NodePlopAPI} */ plop) {
       {
         type: "input",
         name: "queryParams",
-        message: "Expected URL query params (comma separated)",
+        message: "Expected URL query params (comma separated).",
         example: "metric, showCounties",
       },
     ],
     actions: [
       {
         type: "add",
-        path: `${shareImagePagePath}/{{pascalCase name}}SharePage.tsx`,
+        path: `${internalPagePath}/share-image/{{pascalCase name}}SharePage.tsx`,
         template: templateSharePage,
+      },
+      {
+        path: `${internalPagePath}/index.tsx`,
+        pattern: /({\/\* ADD SHARE PAGES HERE \*\/})/g,
+        template: templateSharePageListItem,
+        type: "modify",
       },
     ],
   });
