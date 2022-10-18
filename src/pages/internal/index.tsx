@@ -34,6 +34,14 @@ const InternalHome: NextPage = () => {
             <Link href="/internal/metrics">Metrics</Link>
           </ListItem>
         </List>
+        <Typography variant="h3">Share Image Pages</Typography>
+        <List>
+          <ListItem>
+            <Link href="/internal/share-image/TemplateSharePage?name=Template">
+              Template Page
+            </Link>
+          </ListItem>
+        </List>
       </Container>
     </>
   );
