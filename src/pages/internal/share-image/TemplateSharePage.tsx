@@ -1,21 +1,21 @@
-import { useQueryParams, useResizeObserver } from "src/utils/sharing";
+import { useResizeObserver } from "@actnowcoalition/ui-components";
 import { useRouter } from "next/router";
 import { NextPage } from "next";
 import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
 import { assert } from "@actnowcoalition/assert";
+import isEmpty from "lodash/isEmpty";
 
 const TemplateSharePage: NextPage = () => {
   const router = useRouter();
-  const params = useQueryParams(router);
   const { ref, observerEntry } = useResizeObserver();
   const refComponentHasWidth =
     observerEntry && observerEntry.contentRect.width > 0;
 
-  if (!params) {
+  if (isEmpty(router.query)) {
     return <span>Page loading or no query params were provided...</span>;
   }
-  const { name } = params;
+  const { name } = router.query;
   assert(name !== undefined, "'name' query param is required but is missing.");
 
   return (
