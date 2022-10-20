@@ -8,7 +8,7 @@ import isEmpty from "lodash/isEmpty";
 
 const TemplateSharePage: NextPage = () => {
   const router = useRouter();
-  const { ref, observerEntry } = useResizeObserver();
+  const { setObservedNode, observerEntry } = useResizeObserver();
   const refComponentHasWidth =
     observerEntry && observerEntry.contentRect.width > 0;
 
@@ -21,7 +21,7 @@ const TemplateSharePage: NextPage = () => {
   return (
     <>
       <Box
-        ref={ref}
+        ref={setObservedNode}
         className={refComponentHasWidth ? "screenshot-ready" : undefined}
       >
         {/* Place longest-to-load component here.
