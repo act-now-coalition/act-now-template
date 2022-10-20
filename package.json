@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@actnowcoalition/assert": "^0.1.1",
-    "@actnowcoalition/metrics": "^0.2.2",
+    "@actnowcoalition/metrics": "^0.2.4",
     "@actnowcoalition/number-format": "^0.1.0",
     "@actnowcoalition/regions": "^0.1.1",
     "@actnowcoalition/time-utils": "^0.1.0",
