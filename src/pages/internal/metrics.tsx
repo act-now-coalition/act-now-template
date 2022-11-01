@@ -70,8 +70,8 @@ const MetricCard = ({ metric }: { metric: Metric }) => {
           <Typography>Name: {metric.name}</Typography>
           <Typography>Extended name: {metric.extendedName}</Typography>
           <Typography>
-            Thresholds:{" "}
-            {!metric.thresholds ? "N/A" : metric.thresholds.join(", ")}
+            Categories:{" "}
+            {!metric.categoryValues ? "N/A" : metric.categoryValues.join(", ")}
           </Typography>
         </Stack>
       </CardContent>

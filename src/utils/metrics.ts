@@ -18,8 +18,8 @@ export enum MetricId {
 }
 
 export const dataProviders = [
-  new MockDataProvider(),
-  new StaticValueDataProvider(),
+  new MockDataProvider("mock"),
+  new StaticValueDataProvider("static"),
   new IncidenceFromCumulativesMetricDataProvider(),
   new RollingAverageMetricDataProvider(),
   new PopulationNormalizedDataProvider(),
@@ -99,18 +99,19 @@ export const metrics: MetricDefinition[] = [
   // },
 ];
 
-export const metricLevelSets = [
-  // To create a metric level set(s), uncomment / modify the following lines, then set
-  // the levelSetId property of the metric(s) to the id of the desired level set (e.g. 'cases').
+export const categorySets = [
+  // To create a metric category set(s), uncomment / modify the following
+  // lines, then set the categorySetId property of the metric(s) to the id
+  // of the desired  category set (e.g. 'cases').
   //
   // {
   //   id: "cases",
-  //   levels: [
+  //   categories: [
   //     { id: "low", name: "Low", color: "green" },
   //     { id: "medium", name: "Medium", color: "orange" },
   //     { id: "high", name: "High", color: "red" },
   //   ],
-  //   defaultLevel: {
+  //   defaultCategory: {
   //     color: "grey",
   //     id: "unknown",
   //     name: "Unknown",
@@ -119,6 +120,6 @@ export const metricLevelSets = [
 ];
 
 export const metricCatalog = new MetricCatalog(metrics, dataProviders, {
-  metricLevelSets,
+  categorySets,
   snapshot: DataSnapshotJSON,
 });
