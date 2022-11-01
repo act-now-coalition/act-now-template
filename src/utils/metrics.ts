@@ -102,7 +102,7 @@ export const metrics: MetricDefinition[] = [
 export const categorySets = [
   // To create a metric category set(s), uncomment / modify the following
   // lines, then set the categorySetId property of the metric(s) to the id
-  // of the desired  category set (e.g. 'cases').
+  // of the desired category set (e.g. 'cases').
   //
   // {
   //   id: "cases",
