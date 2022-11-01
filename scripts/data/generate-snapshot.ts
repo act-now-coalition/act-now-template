@@ -7,7 +7,7 @@ import {
 import {
   dataProviders,
   MetricId,
-  metricLevelSets,
+  categorySets,
   metrics,
 } from "src/utils/metrics";
 import { regions } from "src/utils/regions";
@@ -19,7 +19,7 @@ async function main() {
   // Note: Don't use the metricCatalog from `src/utils/metrics.ts` since it uses
   // the generated snapshot by default, and we want to fetch fresh data.
   const metricCatalog = new MetricCatalog(metrics, dataProviders, {
-    metricLevelSets,
+    categorySets,
   });
 
   // Fetch data that we want to include in the snapshot.  Can be arbitrary
