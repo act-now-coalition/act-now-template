@@ -14,6 +14,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "run-script": "yarn ts-node-script",
+    "repl": "yarn run-script scripts/repl/repl.ts",
     "hello": "yarn run-script scripts/hello/index.ts",
     "generate-data-snapshot": "yarn run-script scripts/data/generate-snapshot.ts",
     "create-share-page": "plop share-page"
