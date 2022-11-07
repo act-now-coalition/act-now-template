@@ -82,6 +82,7 @@ data = await metricCatalog.fetchData(state, weekly_new_cases_per_100k, true);
 ### Sorting regions by population
 
 ```ts
+const lodash = require("lodash);
 top4 = lodash.chain(regions.all).sortBy("population").reverse().take(4).value();
 
 console.table(top4, ["regionId", "shortName", "population"]);
