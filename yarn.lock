@@ -50,10 +50,10 @@
     "@types/luxon" "^2.3.2"
     luxon "^2.4.0"
 
-"@actnowcoalition/ui-components@^0.7.1":
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.7.1.tgz#54217e343b0cefe07e2aada111f8902831efcaa7"
-  integrity sha512-WtRz7u2VIzi3qMDvX3chg/2U8fGrAi8SigKIGbybMwOuXuvvriDWDxQqx/jzx3yM8+SJ7aUtC0kC7qslT0/vYA==
+"@actnowcoalition/ui-components@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.8.0.tgz#42146736adf04279b22c7e8ca64e841f70e16efa"
+  integrity sha512-tIP+ymvqMZotlpWOZ2Cx16HoRlnh1KKw0903mEbLFyOlmOotSWZI4w7gs9GQwUWuIxpiletwcMLHMjbV6ILtLg==
   dependencies:
     "@actnowcoalition/assert" "^0.1.0"
     "@actnowcoalition/metrics" "^0.3.2"
