@@ -1,4 +1,4 @@
-# Act Now template
+# Act Now Template
 
 ## Getting Started
 
