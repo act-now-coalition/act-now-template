@@ -10,6 +10,7 @@ import {
   RollingAverageMetricDataProvider,
 } from "./metric-calculations";
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
+import { theme } from "src/styles";
 
 export enum MetricId {
   PI = "pi",
@@ -24,8 +25,8 @@ export const dataProviders = [
   new RollingAverageMetricDataProvider(),
   new PopulationNormalizedDataProvider(),
 
-  // To import CSV data, copy it to public/data and uncomment / modify the
-  // following lines:
+  // To import CSV data, copy the CSV file to `public/data` and modify the
+  // following lines.
   //
   // new CsvDataProvider("xyz-csv", {
   //   url: "/data/xyz.csv",
@@ -100,23 +101,22 @@ export const metrics: MetricDefinition[] = [
 ];
 
 export const categorySets = [
-  // To create a metric category set(s), uncomment / modify the following
-  // lines, then set the categorySetId property of the metric(s) to the id
-  // of the desired category set (e.g. 'cases').
-  //
-  // {
-  //   id: "cases",
-  //   categories: [
-  //     { id: "low", name: "Low", color: "green" },
-  //     { id: "medium", name: "Medium", color: "orange" },
-  //     { id: "high", name: "High", color: "red" },
-  //   ],
-  //   defaultCategory: {
-  //     color: "grey",
-  //     id: "unknown",
-  //     name: "Unknown",
-  //   },
-  // },
+  // To create a metric category set(s), modify the following lines, then
+  // set the categorySetId property of the metric(s) to the id of the desired
+  // category set (e.g. 'example-3-levels').
+  {
+    id: "example-3-levels",
+    categories: [
+      { id: "low", name: "Low", color: theme.palette.severity[100] },
+      { id: "medium", name: "Medium", color: theme.palette.severity[300] },
+      { id: "high", name: "High", color: theme.palette.severity[500] },
+    ],
+    defaultCategory: {
+      color: theme.palette.grey[200],
+      id: "unknown",
+      name: "Unknown",
+    },
+  },
 ];
 
 export const metricCatalog = new MetricCatalog(metrics, dataProviders, {
