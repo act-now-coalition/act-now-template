@@ -101,9 +101,9 @@ export const metrics: MetricDefinition[] = [
 ];
 
 export const categorySets = [
-  // To create a metric category set(s), modify the following lines, then
-  // set the categorySetId property of the metric(s) to the id of the desired
-  // category set (e.g. 'example-3-levels').
+  // To create one or more metric category sets, modify the following lines,
+  // then set the categorySetId property of the metrics to the id of the
+  // desired category set (e.g. 'example-3-levels').
   {
     id: "example-3-levels",
     categories: [
