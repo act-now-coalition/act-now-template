@@ -12,10 +12,14 @@ import {
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
 import { theme } from "src/styles";
 
+import { CsvDataProvider } from "@actnowcoalition/metrics";
+import { regions } from "./regions";
+
 export enum MetricId {
   PI = "pi",
   METRIC1 = "metric1",
   METRIC2 = "metric2",
+  CSV_METRIC = "csv_metric",
 }
 
 export const dataProviders = [
@@ -25,14 +29,15 @@ export const dataProviders = [
   new RollingAverageMetricDataProvider(),
   new PopulationNormalizedDataProvider(),
 
-  // To import CSV data, copy the CSV file to `public/data` and modify the
-  // following lines.
-  //
-  // new CsvDataProvider("xyz-csv", {
-  //   url: "/data/xyz.csv",
-  //   regionColumn: "location",
-  //   dateColumn: "date",
-  // }),
+  // To import CSV data, copy the CSV file to `public/data`, modify the
+  // following lines, and uncomment / modify the example MetricId.CSV_METRIC
+  // definition below.
+  new CsvDataProvider(/*id=*/ "xyz-csv", {
+    url: "/data/xyz.csv",
+    regionDb: regions,
+    regionColumn: "location",
+    dateColumn: "date",
+  }),
 ];
 
 export const metrics: MetricDefinition[] = [
@@ -63,8 +68,8 @@ export const metrics: MetricDefinition[] = [
   // lines:
   //
   // {
-  //   id: MetricId.ABC,
-  //   name: "ABC Metric",
+  //   id: MetricId.CSV_METRIC,
+  //   name: "Example CSV Metric",
   //   dataReference: {
   //     providerId: "xyz-csv",
   //     column: "column-name",
