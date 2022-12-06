@@ -9,6 +9,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "src/styles/theme";
 import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
 import { metricCatalog } from "src/utils/metrics";
+import "./global.css";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
