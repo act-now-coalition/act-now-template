@@ -7,7 +7,6 @@ import {
   IconButton,
   useTheme,
   ButtonGroup,
-  Link,
 } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -19,14 +18,8 @@ const Footer: React.FC = () => {
   return (
     <StyledFooter>
       <Stack spacing={3} maxWidth="960px" margin="auto">
-        <Box maxWidth={100}>
-          <Link href="/">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Bananas.svg/2560px-Bananas.svg.png"
-              width="100%"
-              alt="placeholder image"
-            />
-          </Link>
+        <Box bgcolor={theme.palette.common.white} width={100} p={1}>
+          Logo
         </Box>
         <Typography variant="paragraphLarge" color={theme.palette.common.white}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit
