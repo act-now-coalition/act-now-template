@@ -4,6 +4,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache, Global } from "@emotion/react";
 import createEmotionCache from "src/styles/createEmotionCache";
 import AppBar from "components/AppBar";
+import Footer from "components/Footer";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "src/styles/theme";
 import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
@@ -32,6 +33,7 @@ export default function MyApp(props: MyAppProps) {
         <MetricCatalogProvider metricCatalog={metricCatalog}>
           <AppBar />
           <Component {...pageProps} />
+          <Footer />
         </MetricCatalogProvider>
       </ThemeProvider>
     </CacheProvider>
