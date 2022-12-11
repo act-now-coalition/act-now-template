@@ -43,6 +43,10 @@ collections:
             label: Site Name
           - name: siteUrl
             label: Site URL
+          - name: gaTrackingId
+            label: Google Analytics Tracking ID
+            hint: If you'd like to use Google Analytics, you can enter your tracking ID here.
+            required: false
   - name: pages
     label: Pages
     files:
