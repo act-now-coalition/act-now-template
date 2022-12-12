@@ -1,4 +1,5 @@
 {
   "siteName": "Act Now Tracker",
-  "siteUrl": "http://act-now-template.vercel.app"
+  "siteUrl": "http://act-now-template.vercel.app",
+  "gaTrackingId": ""
 }

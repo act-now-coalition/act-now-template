@@ -10,6 +10,7 @@ import theme from "src/styles/theme";
 import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
 import { metricCatalog } from "src/utils/metrics";
 import { globalStyles } from "src/styles";
+import { AnalyticsSetup } from "src/utils/analytics";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
@@ -29,6 +30,7 @@ export default function MyApp(props: MyAppProps) {
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
       <ThemeProvider theme={theme}>
+        <AnalyticsSetup />
         <CssBaseline />
         <MetricCatalogProvider metricCatalog={metricCatalog}>
           <AppBar />
