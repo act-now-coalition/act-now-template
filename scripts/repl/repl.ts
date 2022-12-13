@@ -1,6 +1,7 @@
 import repl from "node:repl";
+
+import { MetricId, metricCatalog, metrics } from "../../src/utils/metrics";
 import { regions } from "../../src/utils/regions";
-import { metrics, MetricId, metricCatalog } from "../../src/utils/metrics";
 
 const metricList = metricCatalog.metrics;
 

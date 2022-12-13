@@ -1,5 +1,6 @@
-import { Link } from "@mui/material";
 import styled from "@emotion/styled";
+import { Link } from "@mui/material";
+
 import { theme } from "../../styles";
 
 export const StyledFooter = styled("footer")`

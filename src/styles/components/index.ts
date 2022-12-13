@@ -1,4 +1,5 @@
-import { ThemeOptions, LinkProps as MuiLinkProps } from "@mui/material";
+import { LinkProps as MuiLinkProps, ThemeOptions } from "@mui/material";
+
 import { Link } from "./Link";
 
 /**

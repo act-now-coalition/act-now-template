@@ -1,18 +1,19 @@
+import { theme } from "src/styles";
+
 import {
   MetricCatalog,
   MetricDefinition,
   MockDataProvider,
   StaticValueDataProvider,
 } from "@actnowcoalition/metrics";
+import { CsvDataProvider } from "@actnowcoalition/metrics";
+
+import DataSnapshotJSON from "../assets/data/data-snapshot.json";
 import {
   IncidenceFromCumulativesMetricDataProvider,
   PopulationNormalizedDataProvider,
   RollingAverageMetricDataProvider,
 } from "./metric-calculations";
-import DataSnapshotJSON from "../assets/data/data-snapshot.json";
-import { theme } from "src/styles";
-
-import { CsvDataProvider } from "@actnowcoalition/metrics";
 import { regions } from "./regions";
 
 export enum MetricId {

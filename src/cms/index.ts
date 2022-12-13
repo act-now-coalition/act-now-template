@@ -1,9 +1,8 @@
-import { SiteContent } from "./models/SiteContent";
-import { Settings } from "./models/Settings";
-import { Page } from "./models/Page";
-
-import settingsJSON from "./content/settings.json";
 import pagesJSON from "./content/pages.json";
+import settingsJSON from "./content/settings.json";
+import { Page } from "./models/Page";
+import { Settings } from "./models/Settings";
+import { SiteContent } from "./models/SiteContent";
 
 export * from "./models/Settings";
 export * from "./models/SiteContent";

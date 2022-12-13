@@ -1,6 +1,8 @@
 import concat from "lodash/concat";
+
+import { RegionDB, counties, states } from "@actnowcoalition/regions";
+
 import { getRegionRelativeUrl } from "./routing";
-import { states, counties, RegionDB } from "@actnowcoalition/regions";
 
 // TODO: Customize the set of regions your Act Now site supports here.
 // You can import additional predefined regions from @actnowcoalition/regions above.

@@ -1,7 +1,8 @@
 import { Container, Typography } from "@mui/material";
-import { Region } from "@actnowcoalition/regions";
-import { Page } from "src/cms";
 import { PageMetaTags } from "components/SocialMetaTags";
+import { Page } from "src/cms";
+
+import { Region } from "@actnowcoalition/regions";
 
 export const Location: React.FC<{ region: Region; page: Page }> = ({
   region,

@@ -1,5 +1,5 @@
-import { Microcopy, MicrocopyItem } from "./Microcopy";
 import { MetaTags, MetaTagsJSON } from "./MetaTags";
+import { Microcopy, MicrocopyItem } from "./Microcopy";
 
 export interface PageJSON {
   pageId: string;
