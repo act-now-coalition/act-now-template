@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
+import { Page, PageJSON, cms } from "src/cms";
 import Homepage from "src/screens/Homepage";
-import { cms, Page, PageJSON } from "src/cms";
 
 const Home: NextPage<{ pageJSON: PageJSON }> = ({ pageJSON }) => {
   const page = Page.fromJSON(pageJSON);

@@ -1,16 +1,17 @@
-import Head from "next/head";
-import { AppProps } from "next/app";
-import CssBaseline from "@mui/material/CssBaseline";
 import { CacheProvider, EmotionCache, Global } from "@emotion/react";
-import createEmotionCache from "src/styles/createEmotionCache";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
 import AppBar from "components/AppBar";
 import Footer from "components/Footer";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "src/styles/theme";
-import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
-import { metricCatalog } from "src/utils/metrics";
+import { AppProps } from "next/app";
+import Head from "next/head";
 import { globalStyles } from "src/styles";
+import createEmotionCache from "src/styles/createEmotionCache";
+import theme from "src/styles/theme";
 import { AnalyticsSetup } from "src/utils/analytics";
+import { metricCatalog } from "src/utils/metrics";
+
+import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
 
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();

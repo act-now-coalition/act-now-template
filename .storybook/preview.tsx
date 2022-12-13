@@ -1,6 +1,8 @@
 import React from "react";
+
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
+
 import theme from "../src/styles/theme";
 
 // Wraps stories with the MUI Theme provider

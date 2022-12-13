@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import { cms, Page } from "src/cms";
 import { PageMetaTags } from "components/SocialMetaTags";
+import { Page, cms } from "src/cms";
 
 const Homepage: React.FC<{ page: Page }> = ({ page }) => {
   const { microcopy, metaTags } = page;

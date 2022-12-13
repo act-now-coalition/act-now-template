@@ -1,6 +1,7 @@
+import { useEffect } from "react";
+
 import { useRouter } from "next/router";
 import Script from "next/script";
-import { useEffect } from "react";
 
 /** Helper to track a page view with Google Analytics. */
 const trackPageView = (trackingId: string, url: string) => {

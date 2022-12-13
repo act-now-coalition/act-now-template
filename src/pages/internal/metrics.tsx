@@ -1,5 +1,5 @@
 import { useState } from "react";
-import type { NextPage } from "next";
+
 import {
   Breadcrumbs,
   Button,
@@ -13,11 +13,14 @@ import {
   Stack,
   Typography,
 } from "@mui/material";
-import { useMetricCatalog } from "@actnowcoalition/ui-components";
-import { Metric } from "@actnowcoalition/metrics";
-import { PageMetaTags } from "../../components/SocialMetaTags";
+import type { NextPage } from "next";
 import { MetricId } from "src/utils/metrics";
+
+import { Metric } from "@actnowcoalition/metrics";
+import { useMetricCatalog } from "@actnowcoalition/ui-components";
+
 import { cms } from "../../cms";
+import { PageMetaTags } from "../../components/SocialMetaTags";
 
 const MetricsDirectory: NextPage = () => {
   const metricCatalog = useMetricCatalog();

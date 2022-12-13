@@ -1,8 +1,9 @@
 import keyBy from "lodash/keyBy";
+
 import { assert } from "@actnowcoalition/assert";
 
-import { Settings, SettingsJSON } from "./Settings";
 import { Page, PageJSON } from "./Page";
+import { Settings, SettingsJSON } from "./Settings";
 
 export interface SiteContentJSON {
   settings: SettingsJSON;

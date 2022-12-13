@@ -1,10 +1,11 @@
-import { useResizeObserver } from "@actnowcoalition/ui-components";
-import { useRouter } from "next/router";
-import { NextPage } from "next";
-import { Box } from "@mui/system";
 import { Typography } from "@mui/material";
-import { assert } from "@actnowcoalition/assert";
+import { Box } from "@mui/system";
 import isEmpty from "lodash/isEmpty";
+import { NextPage } from "next";
+import { useRouter } from "next/router";
+
+import { assert } from "@actnowcoalition/assert";
+import { useResizeObserver } from "@actnowcoalition/ui-components";
 
 const TemplateSharePage: NextPage = () => {
   const router = useRouter();

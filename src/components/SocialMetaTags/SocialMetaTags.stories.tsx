@@ -1,6 +1,8 @@
 import React from "react";
-import { ComponentStory, ComponentMeta } from "@storybook/react";
-import { PageMetaTags, FacebookMetaTags, TwitterMetaTags } from ".";
+
+import { ComponentMeta, ComponentStory } from "@storybook/react";
+
+import { FacebookMetaTags, PageMetaTags, TwitterMetaTags } from ".";
 
 export default {
   title: "Components/SocialMetaTags",

@@ -1,16 +1,17 @@
 import { promises as fsp } from "fs";
 import * as path from "path";
 import {
-  MetricCatalog,
-  MultiRegionMultiMetricDataStore,
-} from "@actnowcoalition/metrics";
-import {
-  dataProviders,
   MetricId,
   categorySets,
+  dataProviders,
   metrics,
 } from "src/utils/metrics";
 import { regions } from "src/utils/regions";
+
+import {
+  MetricCatalog,
+  MultiRegionMultiMetricDataStore,
+} from "@actnowcoalition/metrics";
 
 const OUTPUT_FOLDER = path.join(__dirname, "../../src/assets/data");
 const DEST_FILE = path.join(OUTPUT_FOLDER, "data-snapshot.json");

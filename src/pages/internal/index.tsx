@@ -1,4 +1,3 @@
-import { NextPage } from "next";
 import {
   Breadcrumbs,
   Container,
@@ -7,8 +6,10 @@ import {
   ListItem,
   Typography,
 } from "@mui/material";
-import { PageMetaTags } from "../../components/SocialMetaTags";
+import { NextPage } from "next";
+
 import { cms } from "../../cms";
+import { PageMetaTags } from "../../components/SocialMetaTags";
 
 const InternalHome: NextPage = () => {
   return (

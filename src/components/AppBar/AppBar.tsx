@@ -1,8 +1,8 @@
 import {
-  Toolbar,
+  Box,
   AppBar as MuiAppBar,
   AppBarProps as MuiAppBarProps,
-  Box,
+  Toolbar,
 } from "@mui/material";
 
 const AppBar: React.FC<MuiAppBarProps> = (props) => {

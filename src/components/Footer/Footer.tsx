@@ -1,16 +1,18 @@
 import React from "react";
+
+import FacebookIcon from "@mui/icons-material/Facebook";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TwitterIcon from "@mui/icons-material/Twitter";
 import { Stack } from "@mui/material";
-import { StyledFooter } from "./Footer.style";
 import {
   Box,
-  Typography,
-  IconButton,
-  useTheme,
   ButtonGroup,
+  IconButton,
+  Typography,
+  useTheme,
 } from "@mui/material";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import InstagramIcon from "@mui/icons-material/Instagram";
+
+import { StyledFooter } from "./Footer.style";
 import { StyledLink } from "./Footer.style";
 
 const Footer: React.FC = () => {

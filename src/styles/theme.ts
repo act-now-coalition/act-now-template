@@ -1,9 +1,11 @@
 import { createTheme } from "@mui/material/styles";
 import { deepmerge } from "@mui/utils";
+
 import { themeConfig as defaultThemeConfig } from "@actnowcoalition/ui-components";
+
+import components from "./components";
 import palette from "./palette";
 import typography from "./typography";
-import components from "./components";
 
 /**
  * Theme configuration variables
