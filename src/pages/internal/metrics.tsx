@@ -14,13 +14,13 @@ import {
   Typography,
 } from "@mui/material";
 import type { NextPage } from "next";
-import { MetricId } from "src/utils/metrics";
 
 import { Metric } from "@actnowcoalition/metrics";
 import { useMetricCatalog } from "@actnowcoalition/ui-components";
 
 import { cms } from "../../cms";
 import { PageMetaTags } from "../../components/SocialMetaTags";
+import { MetricId } from "src/utils/metrics";
 
 const MetricsDirectory: NextPage = () => {
   const metricCatalog = useMetricCatalog();

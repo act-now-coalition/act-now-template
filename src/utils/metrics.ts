@@ -1,5 +1,3 @@
-import { theme } from "src/styles";
-
 import {
   MetricCatalog,
   MetricDefinition,
@@ -15,6 +13,7 @@ import {
   RollingAverageMetricDataProvider,
 } from "./metric-calculations";
 import { regions } from "./regions";
+import { theme } from "src/styles";
 
 export enum MetricId {
   PI = "pi",

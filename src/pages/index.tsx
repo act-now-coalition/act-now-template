@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+
 import { Page, PageJSON, cms } from "src/cms";
 import Homepage from "src/screens/Homepage";
 

@@ -2,13 +2,14 @@ import keyBy from "lodash/keyBy";
 import type { NextPage } from "next";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
+
+import { assert } from "@actnowcoalition/assert";
+import { Region } from "@actnowcoalition/regions";
+
 import { Page, PageJSON, cms } from "src/cms";
 import { Location } from "src/screens/Location";
 import { regions } from "src/utils/regions";
 import { getRegionSlug } from "src/utils/routing";
-
-import { assert } from "@actnowcoalition/assert";
-import { Region } from "@actnowcoalition/regions";
 
 const regionsBySlug = keyBy(regions.all, getRegionSlug);
 

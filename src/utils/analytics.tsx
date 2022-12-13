@@ -1,6 +1,5 @@
-import { cms } from "src/cms";
-
 import { GoogleAnalyticsSetup } from "./google-analytics";
+import { cms } from "src/cms";
 
 /**
  * Imports any analytics scripts and configures them.
