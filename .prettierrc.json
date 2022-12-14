@@ -5,6 +5,6 @@
     "^react$",
     "<THIRD_PARTY_MODULES>",
     "^@actnowcoalition/",
-    "^[./]"
+    "^\\.|^src|^components"
   ]
 }

@@ -1,5 +1,6 @@
 import { Container } from "@mui/material";
 import Typography from "@mui/material/Typography";
+
 import { PageMetaTags } from "components/SocialMetaTags";
 import { Page, cms } from "src/cms";
 
