@@ -41,9 +41,15 @@ const Homepage: React.FC<{ page: Page }> = ({ page }) => {
         <PageSection>
           <RegionSearch options={regions.all} regionDB={regions} />
         </PageSection>
-        <Placeholder />
-        <Placeholder />
-        <Placeholder />
+        <PageSection>
+          <Placeholder />
+        </PageSection>
+        <PageSection>
+          <Placeholder />
+        </PageSection>
+        <PageSection>
+          <Placeholder />
+        </PageSection>
       </Container>
     </>
   );
