@@ -14,7 +14,7 @@ export const PageSection = styled(Box)`
 /**
  * Simple container with default margins and a border.
  */
-export const PageSectionBorder = styled(PageSection)`
+export const BorderedPageSection = styled(PageSection)`
   border: solid 1px ${({ theme }) => theme.palette.border.default};
   border-radius: ${({ theme }) => theme.spacing(0.5)};
   padding: ${({ theme }) => theme.spacing(3)};

@@ -7,6 +7,12 @@ import { PageMetaTags } from "components/SocialMetaTags";
 import { Page, cms } from "src/cms";
 import { regions } from "src/utils/regions";
 
+/**
+ *
+ * @param page - The page we are using
+ * @defaultValue b
+ * @returns
+ */
 const Homepage: React.FC<{ page: Page }> = ({ page }) => {
   const { microcopy, metaTags } = page;
   return (

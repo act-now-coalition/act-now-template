@@ -3,9 +3,9 @@ import { Grid, Typography } from "@mui/material";
 import { Region } from "@actnowcoalition/regions";
 
 import {
+  BorderedPageSection,
   PageContainer,
   PageSection,
-  PageSectionBorder,
   Placeholder,
 } from "components/Containers";
 import { PageMetaTags } from "components/SocialMetaTags";
@@ -32,7 +32,7 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
           <Typography variant="h1">{region.shortName}</Typography>
           <Typography>{microcopy.get("heading.updated")}</Typography>
         </PageSection>
-        <PageSectionBorder>
+        <BorderedPageSection>
           {/* Example of a responsive layout */}
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
@@ -43,7 +43,7 @@ export const Location: React.FC<{ region: Region; page: Page }> = ({
             </Grid>
           </Grid>
           <Placeholder sx={{ mt: 3, minHeight: 180 }} />
-        </PageSectionBorder>
+        </BorderedPageSection>
         {/* Replace the placeholder with real content */}
         <PageSection>
           <Placeholder />
