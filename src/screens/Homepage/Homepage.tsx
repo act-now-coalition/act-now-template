@@ -1,9 +1,18 @@
-import { Container } from "@mui/material";
-import Typography from "@mui/material/Typography";
+import { Typography } from "@mui/material";
 
+import { RegionSearch } from "@actnowcoalition/ui-components";
+
+import { PageContainer, PageSection, Placeholder } from "components/Containers";
 import { PageMetaTags } from "components/SocialMetaTags";
 import { Page, cms } from "src/cms";
+import { regions } from "src/utils/regions";
 
+/**
+ *
+ * @param page - The page we are using
+ * @defaultValue b
+ * @returns
+ */
 const Homepage: React.FC<{ page: Page }> = ({ page }) => {
   const { microcopy, metaTags } = page;
   return (
@@ -17,13 +26,36 @@ const Homepage: React.FC<{ page: Page }> = ({ page }) => {
         socialImgWidth={metaTags.socialImgWidth}
         socialImgHeight={metaTags.socialImgHeight}
       />
-      <Container>
-        <Typography variant="h1">{microcopy.get("title")}</Typography>
-        <Typography variant="h2">{microcopy.get("heading.title")}</Typography>
-        <Typography variant="paragraphLarge">
-          {microcopy.get("heading.intro")}
-        </Typography>
-      </Container>
+      <PageContainer maxWidth="md">
+        <PageSection>
+          <Typography variant="h1" align="center">
+            {microcopy.get("title")}
+          </Typography>
+          <Typography variant="h2" align="center">
+            {microcopy.get("heading.title")}
+          </Typography>
+          <Typography
+            variant="paragraphLarge"
+            align="center"
+            sx={{ display: "block", my: 2 }}
+          >
+            {microcopy.get("heading.intro")}
+          </Typography>
+        </PageSection>
+        <PageSection>
+          <RegionSearch options={regions.all} regionDB={regions} />
+        </PageSection>
+        {/* Replace the placeholders with real content */}
+        <PageSection>
+          <Placeholder />
+        </PageSection>
+        <PageSection>
+          <Placeholder />
+        </PageSection>
+        <PageSection>
+          <Placeholder />
+        </PageSection>
+      </PageContainer>
     </>
   );
 };
