@@ -39,6 +39,7 @@ const Homepage: React.FC<{ page: Page }> = ({ page }) => {
         <PageSection>
           <RegionSearch options={regions.all} regionDB={regions} />
         </PageSection>
+        {/* Replace the placeholders with real content */}
         <PageSection>
           <Placeholder />
         </PageSection>
