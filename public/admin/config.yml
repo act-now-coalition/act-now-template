@@ -2,18 +2,18 @@
 # 'branch' is the branch where all copy changes made in the CMS UI will be committed
 # Netlify CMS docs: https://www.netlifycms.org/docs/intro/
 #
-# GitHub OAuth authentication is handed via a vercel serverless function set up
+# GitHub OAuth authentication is handed via a Vercel serverless function set up
 # according to https://ironeko.com/posts/how-to-install-netlify-cms-on-vercel
 # (using https://github.com/bericp1/netlify-cms-oauth-provider-node)
 #
-# It relies on environment variables in our vercel project that point to the
+# It relies on environment variables in our Vercel project that point to the
 # "TEMPLATE CMS" Github OAuth app
 # (https://github.com/organizations/covid-projections/settings/applications/1789164).
 
 backend:
   name: github
   repo: covid-projections/act-now-template
-  branch: cms-content-entry
+  branch: develop
   base_url: http://act-now-template.vercel.app/
   auth_endpoint: api/auth
 
