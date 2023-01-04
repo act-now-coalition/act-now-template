@@ -24,7 +24,7 @@ const components: ThemeOptions["components"] = {
   },
   MuiLink: {
     defaultProps: {
-      defaultComponent: Link,
+      component: Link,
     } as MuiLinkProps,
   },
 };

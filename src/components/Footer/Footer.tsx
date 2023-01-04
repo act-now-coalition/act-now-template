@@ -3,23 +3,22 @@ import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import { Stack } from "@mui/material";
 import {
   Box,
   ButtonGroup,
   IconButton,
+  Stack,
   Typography,
   useTheme,
 } from "@mui/material";
 
-import { StyledFooter } from "./Footer.style";
-import { StyledLink } from "./Footer.style";
+import { StyledFooter, StyledLink } from "./Footer.style";
 
-const Footer: React.FC = () => {
+const Footer = () => {
   const theme = useTheme();
   return (
     <StyledFooter>
-      <Stack spacing={3} maxWidth="960px" margin="auto">
+      <Stack spacing={3} maxWidth="md" margin="auto">
         <Box bgcolor={theme.palette.common.white} width={100} p={1}>
           Logo
         </Box>

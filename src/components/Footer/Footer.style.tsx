@@ -1,7 +1,6 @@
-import styled from "@emotion/styled";
 import { Link } from "@mui/material";
 
-import { theme } from "../../styles";
+import { styled, theme } from "../../styles";
 
 export const StyledFooter = styled("footer")`
   background-color: ${theme.palette.common.black};
