@@ -40,7 +40,7 @@ This template comes pre-configured to use [Netlify CMS](https://www.netlifycms.o
 
 Using GitHub to authenticate CMS users requires a server handling the authentication flow. We use [Vercel](https://vercel.com/) serverless functions to handle the authentication flow. See [`src/pages/api/auth.js`](./src/pages/api/auth.js) and [`src/pages/api/callback.js`](./src/pages/api/callback.js).
 
-#### Step by step instructions
+#### Step-By-Step Instructions
 
 1. Create a [GitHub OAuth App](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app). This application will be used to authenticate your CMS users. For example, if the URL of the production deployment of your app is `https://act-now-template.vercel.app`, you will need to set the following fields when creating the app.
 
@@ -70,6 +70,10 @@ Using GitHub to authenticate CMS users requires a server handling the authentica
    ```
 
    The CMS interface will be available at `https://act-now-template.vercel.app/admin/`
+
+## Update Act Now Package Dependencies
+
+This template repository comes with a handy built-in script that automatically updates Act Now package dependencies. To update Act Now package dependencies, simply run the [update-act-now-packages.sh](https://github.com/covid-projections/act-now-template/blob/develop/update-act-now-packages.sh) script located in the root directory.
 
 ## Learn More
 
