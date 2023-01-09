@@ -7,6 +7,19 @@ import components from "./components";
 import palette from "./palette";
 import typography from "./typography";
 
+// Can we "import" this module augmentation from @actnowcoalition/ui-components?
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    paragraphSmall: true;
+    paragraphLarge: true;
+    labelSmall: true;
+    labelLarge: true;
+    dataEmphasizedSmall: true;
+    dataEmphasizedLarge: true;
+    dataTabular: true;
+  }
+}
+
 /**
  * Theme configuration variables
  * https://mui.com/customization/theming/#theme-configuration-variables
