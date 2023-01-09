@@ -63,7 +63,7 @@ Using GitHub to authenticate CMS users requires a server handling the authentica
    ```yml
    backend:
      name: github
-     repo: covid-projections/act-now-template
+     repo: act-now-coalition/act-now-template
      branch: develop
      base_url: https://act-now-template.vercel.app
      auth_endpoint: api/auth
@@ -73,7 +73,7 @@ Using GitHub to authenticate CMS users requires a server handling the authentica
 
 ## Update Act Now Package Dependencies
 
-This template repository comes with a handy built-in script that automatically updates Act Now package dependencies. To update Act Now package dependencies, simply run the [update-act-now-packages.sh](https://github.com/covid-projections/act-now-template/blob/develop/update-act-now-packages.sh) script located in the root directory.
+This template repository comes with a handy built-in script that automatically updates Act Now package dependencies. To update Act Now package dependencies, simply run the [update-act-now-packages.sh](https://github.com/act-now-coalition/act-now-template/blob/develop/update-act-now-packages.sh) script located in the root directory.
 
 ## Learn More
 
