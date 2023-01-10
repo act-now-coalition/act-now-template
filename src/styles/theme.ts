@@ -18,6 +18,18 @@ const internalThemeConfig = {
   components,
 };
 
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    paragraphSmall: true;
+    paragraphLarge: true;
+    labelSmall: true;
+    labelLarge: true;
+    dataEmphasizedSmall: true;
+    dataEmphasizedLarge: true;
+    dataTabular: true;
+  }
+}
+
 /**
  * We take the theme config object containing the default
  * Act Now design system (defaultThemeConfig), and we deep merge
