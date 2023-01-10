@@ -8,11 +8,11 @@
 #
 # It relies on environment variables in our Vercel project that point to the
 # "TEMPLATE CMS" Github OAuth app
-# (https://github.com/organizations/covid-projections/settings/applications/1789164).
+# (https://github.com/organizations/act-now-coalition/settings/applications/1789164).
 
 backend:
   name: github
-  repo: covid-projections/act-now-template
+  repo: act-now-coalition/act-now-template
   branch: develop
   base_url: http://act-now-template.vercel.app/
   auth_endpoint: api/auth
