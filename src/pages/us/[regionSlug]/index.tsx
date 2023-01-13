@@ -1,6 +1,5 @@
 import keyBy from "lodash/keyBy";
-import type { NextPage } from "next";
-import { GetStaticPaths, GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 import { assert } from "@actnowcoalition/assert";
