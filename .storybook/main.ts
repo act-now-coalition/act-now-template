@@ -1,4 +1,4 @@
-module.exports = {
+const storybookConfig = {
   stories: ["../src/**/*.stories.@(js|jsx|ts|tsx|mdx)"],
   addons: [
     "@storybook/addon-links",
@@ -7,3 +7,5 @@ module.exports = {
   ],
   framework: "@storybook/react",
 };
+
+export default storybookConfig;
