@@ -7,19 +7,6 @@ import components from "./components";
 import palette from "./palette";
 import typography from "./typography";
 
-// TODO (Pablo): Not sure why we need to re-declare the Typography variants
-declare module "@mui/material/Typography" {
-  interface TypographyPropsVariantOverrides {
-    paragraphSmall: true;
-    paragraphLarge: true;
-    labelSmall: true;
-    labelLarge: true;
-    dataEmphasizedSmall: true;
-    dataEmphasizedLarge: true;
-    dataTabular: true;
-  }
-}
-
 /**
  * Theme configuration variables
  * https://mui.com/customization/theming/#theme-configuration-variables
