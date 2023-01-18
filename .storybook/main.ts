@@ -6,13 +6,7 @@ const storybookConfig = {
     "@storybook/addon-interactions",
   ],
   framework: "@storybook/react",
-  refs: {
-    "act-now-packages": {
-      title: "Act Now Components",
-      url: "https://act-now-packages.web.app/storybook",
-      expanded: true,
-    },
-  },
+  staticDirs: ["../public"],
 };
 
 export default storybookConfig;

@@ -1,19 +1,19 @@
 import {
+  CsvDataProvider,
   MetricCatalog,
   MetricDefinition,
   MockDataProvider,
   StaticValueDataProvider,
 } from "@actnowcoalition/metrics";
-import { CsvDataProvider } from "@actnowcoalition/metrics";
 
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
+import { theme } from "../styles";
 import {
   IncidenceFromCumulativesMetricDataProvider,
   PopulationNormalizedDataProvider,
   RollingAverageMetricDataProvider,
 } from "./metric-calculations";
 import { regions } from "./regions";
-import { theme } from "src/styles";
 
 export enum MetricId {
   PI = "pi",
