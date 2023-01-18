@@ -4,6 +4,7 @@ import type { NextPage } from "next";
 import { cms } from "../../cms";
 import { PageMetaTags } from "../../components/SocialMetaTags";
 import { regions } from "src/utils/regions";
+import { getRegionRelativeUrl } from "src/utils/routing";
 
 const RegionsDirectory: NextPage = () => {
   return (
@@ -29,7 +30,7 @@ const RegionsDirectory: NextPage = () => {
         <Typography variant="h1">Regions</Typography>
         {regions.all.map((region) => {
           return (
-            <Link href={region.relativeUrl} key={region.regionId}>
+            <Link href={getRegionRelativeUrl(region)} key={region.regionId}>
               <Typography color="black" variant="body1" key={region.regionId}>
                 {region.fullName}
               </Typography>
