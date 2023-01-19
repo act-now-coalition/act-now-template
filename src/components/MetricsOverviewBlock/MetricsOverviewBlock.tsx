@@ -33,14 +33,14 @@ export const MetricsOverviewBlock = ({
   const metrics = metricsOrIds.map((m) => metricCatalog.getMetric(m));
 
   return (
-    <Grid container item spacing={2}>
+    <Grid container spacing={2}>
       {metrics.map((metric, metricIndex) => (
         <Grid item key={`item-${metric.id}-${metricIndex}`} xs={12} sm={3}>
           <MetricOverview
             region={region}
             metric={metric}
             metricChart={
-              isMobile ? undefined : (
+              !isMobile && (
                 <AutoWidth>
                   <MetricSparklines
                     region={region}
