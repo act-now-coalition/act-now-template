@@ -1,6 +1,6 @@
 {
   "siteName": "Act Now Tracker",
   "siteUrl": "http://act-now-template.vercel.app",
-  "gaTrackingId": "",
-  "siteLogo": "/cms/media/placeholderlogo.png"
+  "siteLogo": "/cms/media/placeholderlogo.png",
+  "gaTrackingId": ""
 }
