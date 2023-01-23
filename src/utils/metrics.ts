@@ -1,10 +1,10 @@
 import {
+  CsvDataProvider,
   MetricCatalog,
   MetricDefinition,
   MockDataProvider,
   StaticValueDataProvider,
 } from "@actnowcoalition/metrics";
-import { CsvDataProvider } from "@actnowcoalition/metrics";
 
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
 import {
@@ -54,7 +54,10 @@ export const metrics: MetricDefinition[] = [
     name: "Mock Metric 1",
     dataReference: {
       providerId: "mock",
+      delayMs: 5000,
     },
+    categorySetId: "example-3-levels",
+    categoryThresholds: [1, 10],
   },
   {
     id: MetricId.METRIC2,
