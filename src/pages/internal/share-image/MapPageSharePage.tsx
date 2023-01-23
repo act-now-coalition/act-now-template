@@ -1,3 +1,4 @@
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import isEmpty from "lodash/isEmpty";
 import { NextPage } from "next";
@@ -25,15 +26,18 @@ const MapPageSharePage: NextPage = () => {
 
   return (
     <>
-      <Box
-        ref={setObservedNode}
-        className={refComponentHasWidth ? "screenshot-ready" : undefined}
-      >
-        <MetricUSNationalMap
-          metric={metric}
-          regionDB={regions}
-          getTooltip={(region) => region}
-        />
+      <Box className="screenshot">
+        <Typography variant="h2">Map Share Page</Typography>
+        <Box
+          ref={setObservedNode}
+          className={refComponentHasWidth ? "screenshot-ready" : undefined}
+        >
+          <MetricUSNationalMap
+            metric={metric}
+            regionDB={regions}
+            getTooltip={(region) => region}
+          />
+        </Box>
       </Box>
     </>
   );
