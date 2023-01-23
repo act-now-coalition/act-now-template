@@ -43,6 +43,11 @@ collections:
             label: Site Name
           - name: siteUrl
             label: Site URL
+          - name: siteLogo
+            label: Site Logo
+            hint: Logo image for the site
+            widget: image
+            allow_multiple: false
           - name: gaTrackingId
             label: Google Analytics Tracking ID
             hint: If you'd like to use Google Analytics, you can enter your tracking ID here.
