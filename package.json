@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "build:analyze": "ANALYZE=true yarn build",
-    "lint": "next lint",
+    "lint": "next lint && yarn eslint '**/*.{ts,tsx}'",
     "ts-check": "tsc --project tsconfig.json",
     "local-cms": "npx netlify-cms-proxy-server",
     "prepare": "husky install",
