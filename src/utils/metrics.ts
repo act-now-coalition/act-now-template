@@ -1,10 +1,10 @@
 import {
+  CsvDataProvider,
   MetricCatalog,
   MetricDefinition,
   MockDataProvider,
   StaticValueDataProvider,
 } from "@actnowcoalition/metrics";
-import { CsvDataProvider } from "@actnowcoalition/metrics";
 
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
 import {
