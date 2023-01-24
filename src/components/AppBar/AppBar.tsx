@@ -5,7 +5,7 @@ import {
   Toolbar,
 } from "@mui/material";
 
-import Logo from "components/Logo";
+import Logo from "../Logo";
 
 const AppBar: React.FC<MuiAppBarProps> = (props) => {
   // NOTE: If you change the height of the AppBar you should adjust the scroll

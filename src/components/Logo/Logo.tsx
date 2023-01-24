@@ -1,9 +1,15 @@
 import { Link } from "@mui/material";
+import Image from "next/image";
 
 const Logo: React.FC = () => {
   return (
     <Link href="/">
-      <img src="/placeholderlogo.png" width={100} alt="Site logo" />
+      <Image
+        src="/placeholderlogo.png"
+        width={100}
+        height={80}
+        alt="Site logo"
+      />
     </Link>
   );
 };
