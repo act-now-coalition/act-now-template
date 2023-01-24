@@ -13,14 +13,15 @@ import {
 } from "@mui/material";
 
 import { StyledFooter, StyledLink } from "./Footer.style";
+import Logo from "components/Logo";
 
 const Footer = () => {
   const theme = useTheme();
   return (
     <StyledFooter>
       <Stack spacing={3} maxWidth="md" margin="auto">
-        <Box bgcolor={theme.palette.common.white} width={100} p={1}>
-          Logo
+        <Box width={100} p={1}>
+          <Logo />
         </Box>
         <Typography variant="paragraphLarge" color={theme.palette.common.white}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit
