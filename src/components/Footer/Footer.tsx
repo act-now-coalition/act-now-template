@@ -22,8 +22,8 @@ const Footer = () => {
       <Stack spacing={3} maxWidth="md" margin="auto">
         <Logo />
         <Typography variant="paragraphLarge" color={theme.palette.common.white}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit
-          amet imperdiet lectus.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </Typography>
         <Box sx={{ color: theme.palette.common.white }}>
           <StyledLink href="/">About</StyledLink>
