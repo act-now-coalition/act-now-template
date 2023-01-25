@@ -23,8 +23,7 @@ const Footer = () => {
           Logo
         </Box>
         <Typography variant="paragraphLarge" color={theme.palette.common.white}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit
-          amet imperdiet lectus.
+          This is the footer text. Write a short paragraph here for your footer.
         </Typography>
         <Box sx={{ color: theme.palette.common.white }}>
           <StyledLink href="/">About</StyledLink>

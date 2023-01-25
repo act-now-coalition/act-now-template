@@ -19,15 +19,15 @@
       "microcopy": [
         {
           "microcopyId": "title",
-          "microcopyContent": "Act Now Tracker"
+          "microcopyContent": "Homepage Heading"
         },
         {
           "microcopyId": "heading.title",
-          "microcopyContent": "Risk Levels"
+          "microcopyContent": "Homepage Subheading"
         },
         {
           "microcopyId": "heading.intro",
-          "microcopyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Fermentum leo vel orci porta non."
+          "microcopyContent": "This is the homepage introduction. Write a short paragraph here introducing your site."
         }
       ],
       "metaTags": {

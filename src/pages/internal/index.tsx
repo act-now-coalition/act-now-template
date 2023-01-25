@@ -1,4 +1,5 @@
 import {
+  Box,
   Breadcrumbs,
   Container,
   Link,
@@ -30,20 +31,42 @@ const InternalHome: NextPage = () => {
           </Link>
         </Breadcrumbs>
         <Typography variant="h1">Internal</Typography>
+        <Typography variant="paragraphLarge">
+          This internal page serves as a directory to other internal pages. Each
+          internal page is connected to an internal directory.
+        </Typography>
         <List>
           <ListItem>
-            <Link href="/internal/metrics">Metrics</Link>
+            <Box>
+              <Link href="/internal/metrics">Metrics</Link>
+              <br />
+              The <code>internal/metrics</code> page displays all defined
+              metrics included in your metric catalog. These metrics are located
+              in <code>src/utils/metrics.ts</code>.
+            </Box>
           </ListItem>
           <ListItem>
-            <Link href="/internal/regions">Regions</Link>
+            <Box>
+              <Link href="/internal/regions">Regions</Link>
+              <br />
+              The <code>internal/regions</code> page displays all links to your
+              region-specific pages. These regions are the ones in your region
+              database, defined in <code>src/utils/regions.ts</code>. As a
+              starting point, our <code>@actnowcoalition/regions</code> package
+              (included in this template) comes with some predefined regions.
+            </Box>
           </ListItem>
         </List>
         <Typography variant="h3">Share Image Pages</Typography>
         <List>
           <ListItem>
-            <Link href="/internal/share-image/TemplateSharePage?name=Template">
-              Template Page
-            </Link>
+            <Box>
+              <Link href="/internal/share-image/TemplateSharePage?name=Template">
+                Template Page
+              </Link>
+              <br />
+              This is an example of a share page.
+            </Box>
           </ListItem>
           {/* ADD SHARE PAGES HERE */}
           {/* Do not remove above comment. Plop uses it as a target 
