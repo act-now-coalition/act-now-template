@@ -19,15 +19,15 @@
       "microcopy": [
         {
           "microcopyId": "title",
-          "microcopyContent": "Homepage Heading"
+          "microcopyContent": "Homepage Heading Placeholder"
         },
         {
           "microcopyId": "heading.title",
-          "microcopyContent": "Homepage Subheading"
+          "microcopyContent": "Homepage Subheading Placeholder"
         },
         {
           "microcopyId": "heading.intro",
-          "microcopyContent": "This is the homepage introduction. Write a short paragraph here introducing your site."
+          "microcopyContent": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
         }
       ],
       "metaTags": {
