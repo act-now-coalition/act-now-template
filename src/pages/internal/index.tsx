@@ -33,7 +33,8 @@ const InternalHome: NextPage = () => {
         <Typography variant="h1">Internal</Typography>
         <Typography variant="paragraphLarge">
           This internal page serves as a directory to other internal pages. Each
-          internal page is connected to an internal directory.
+          internal page comprehensively displays properties defined in your
+          codebase, including metrics, regions, and share pages you defined.
         </Typography>
         <List>
           <ListItem>
@@ -51,9 +52,10 @@ const InternalHome: NextPage = () => {
               <br />
               The <code>internal/regions</code> page displays all links to your
               region-specific pages. These regions are the ones in your region
-              database, defined in <code>src/utils/regions.ts</code>. As a
-              starting point, our <code>@actnowcoalition/regions</code> package
-              (included in this template) comes with some predefined regions.
+              database, which is instantiated in{" "}
+              <code>src/utils/regions.ts</code>. As a starting point, our{" "}
+              <code>@actnowcoalition/regions</code> package (included in this
+              template) comes with some predefined regions.
             </Box>
           </ListItem>
         </List>
