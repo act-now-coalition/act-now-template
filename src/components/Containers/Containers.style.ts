@@ -57,3 +57,32 @@ export const Placeholder = styled(Box)`
     content: "PLACEHOLDER";
   }
 `;
+
+/**
+ * Container used to create correct dimensions for preview images.
+ * Wrap the entirety of the share page content in this container and
+ * add the className "screenshot" to this element.
+ */
+export const ScreenshotWrapper = styled(Box)`
+  margin: 100px auto;
+  width: 1200px;
+  height: 630px;
+  overflow: hidden;
+  background-color: white;
+`;
+
+/**
+ * Container used to create correctly format map previews.
+ * Wrap the map in this container.
+ */
+export const MapShareWrapper = styled(Box)`
+  margin: auto;
+  width: 515px;
+  transform: scale(2);
+  transform-origin: top center;
+
+  /* HACK to remove box-shadow from SocialLocationPreview component. */
+  div:first-child {
+    box-shadow: none;
+  }
+`;
