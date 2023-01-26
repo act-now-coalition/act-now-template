@@ -80,9 +80,4 @@ export const MapShareWrapper = styled(Box)`
   width: 515px;
   transform: scale(2);
   transform-origin: top center;
-
-  /* HACK to remove box-shadow from SocialLocationPreview component. */
-  div:first-child {
-    box-shadow: none;
-  }
 `;

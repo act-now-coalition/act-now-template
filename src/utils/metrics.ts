@@ -57,14 +57,7 @@ export const metrics: MetricDefinition[] = [
       delayMs: 5000,
     },
     categorySetId: "example-3-levels",
-    categoryThresholds: [1, 10],
-  },
-  {
-    id: MetricId.METRIC2,
-    name: "Mock Metric 2",
-    dataReference: {
-      providerId: "mock",
-    },
+    categoryThresholds: [1, 20],
   },
 
   // To create a metric using data from a CSV, uncomment / modify the following
