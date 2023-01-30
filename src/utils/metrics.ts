@@ -19,6 +19,7 @@ export enum MetricId {
   PI = "pi",
   METRIC1 = "metric1",
   METRIC2 = "metric2",
+  DELAYED_METRIC = "delayed_metric",
   CSV_METRIC = "csv_metric",
 }
 
@@ -52,6 +53,20 @@ export const metrics: MetricDefinition[] = [
   {
     id: MetricId.METRIC1,
     name: "Mock Metric 1",
+    dataReference: {
+      providerId: "mock",
+    },
+  },
+  {
+    id: MetricId.METRIC2,
+    name: "Mock Metric 2",
+    dataReference: {
+      providerId: "mock",
+    },
+  },
+  {
+    id: MetricId.DELAYED_METRIC,
+    name: "Delayed Mock Metric",
     dataReference: {
       providerId: "mock",
       delayMs: 5000,
