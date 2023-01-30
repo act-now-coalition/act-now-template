@@ -63,7 +63,7 @@ const InternalHome: NextPage = () => {
         Pages used to generate share images for social media.
         <List>
           <ListItem>
-            <Link href="/internal/share-image/example-map-share-page?">
+            <Link href="/internal/share-image/example-share-page?">
               example-map
             </Link>
           </ListItem>
