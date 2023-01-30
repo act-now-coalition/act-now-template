@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 
-import { RegionSearch } from "@actnowcoalition/ui-components";
+import { RegionSearch } from "@actnowcoalition/actnow.js";
 
 import { PageContainer, PageSection, Placeholder } from "components/Containers";
 import { PageMetaTags } from "components/SocialMetaTags";

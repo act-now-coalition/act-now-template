@@ -4,7 +4,7 @@ import {
   MetricDefinition,
   MockDataProvider,
   StaticValueDataProvider,
-} from "@actnowcoalition/metrics";
+} from "@actnowcoalition/actnow.js";
 
 import DataSnapshotJSON from "../assets/data/data-snapshot.json";
 import {

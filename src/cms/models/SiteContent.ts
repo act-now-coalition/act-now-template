@@ -1,6 +1,6 @@
 import keyBy from "lodash/keyBy";
 
-import { assert } from "@actnowcoalition/assert";
+import { assert } from "@actnowcoalition/actnow.js";
 
 import { Page, PageJSON } from "./Page";
 import { Settings, SettingsJSON } from "./Settings";

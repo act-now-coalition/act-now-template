@@ -4,7 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import { AppProps } from "next/app";
 import Head from "next/head";
 
-import { MetricCatalogProvider } from "@actnowcoalition/ui-components";
+import { MetricCatalogProvider } from "@actnowcoalition/actnow.js";
 
 import AppBar from "components/AppBar";
 import Footer from "components/Footer";

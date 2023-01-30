@@ -4,8 +4,7 @@ import isEmpty from "lodash/isEmpty";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 
-import { assert } from "@actnowcoalition/assert";
-import { useResizeObserver } from "@actnowcoalition/ui-components";
+import { assert, useResizeObserver } from "@actnowcoalition/actnow.js";
 
 const TemplateSharePage: NextPage = () => {
   const router = useRouter();
@@ -26,7 +25,7 @@ const TemplateSharePage: NextPage = () => {
         className={refComponentHasWidth ? "screenshot-ready" : undefined}
       >
         {/* Place longest-to-load component here.
-          When the component is visible (has a width > 0) the screenshot-ready class will be 
+          When the component is visible (has a width > 0) the screenshot-ready class will be
           added to the box, signaling that the screenshot is ready to be captured. */}
         <Typography>{name}</Typography>
       </Box>

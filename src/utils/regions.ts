@@ -1,6 +1,6 @@
 import concat from "lodash/concat";
 
-import { RegionDB, counties, states } from "@actnowcoalition/regions";
+import { RegionDB, counties, states } from "@actnowcoalition/actnow.js";
 
 import { getRegionRelativeUrl } from "./routing";
 

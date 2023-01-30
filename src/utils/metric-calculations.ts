@@ -1,9 +1,9 @@
 import {
   Metric,
   MetricData,
+  Region,
   TransformedMetricDataProvider,
-} from "@actnowcoalition/metrics";
-import { Region } from "@actnowcoalition/regions";
+} from "@actnowcoalition/actnow.js";
 
 /** Calculates a "new Xyz" metric from a "cumulative Xyz" source metric. */
 export class IncidenceFromCumulativesMetricDataProvider extends TransformedMetricDataProvider {

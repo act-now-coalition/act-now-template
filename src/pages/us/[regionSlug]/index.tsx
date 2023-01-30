@@ -2,8 +2,7 @@ import keyBy from "lodash/keyBy";
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 
-import { assert } from "@actnowcoalition/assert";
-import { Region } from "@actnowcoalition/regions";
+import { Region, assert } from "@actnowcoalition/actnow.js";
 
 import { Page, PageJSON, cms } from "src/cms";
 import { Location } from "src/screens/Location";

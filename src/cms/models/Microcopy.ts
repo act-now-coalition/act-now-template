@@ -1,4 +1,4 @@
-import { assert } from "@actnowcoalition/assert";
+import { assert } from "@actnowcoalition/actnow.js";
 
 export interface MicrocopyItem {
   microcopyId: string;

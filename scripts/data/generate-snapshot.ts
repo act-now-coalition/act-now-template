@@ -4,7 +4,7 @@ import * as path from "path";
 import {
   // MetricCatalog,
   MultiRegionMultiMetricDataStore,
-} from "@actnowcoalition/metrics";
+} from "@actnowcoalition/actnow.js";
 
 // import {
 //   MetricId,
