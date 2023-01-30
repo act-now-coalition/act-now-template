@@ -4,7 +4,9 @@ import isEmpty from "lodash/isEmpty";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 
-import { assert, useResizeObserver } from "@actnowcoalition/actnow.js";
+import { assert } from "@actnowcoalition/actnow.js";
+// TODO(michael): Remove this once #98 lands and also update plopfile.mjs
+import { useResizeObserver } from "@actnowcoalition/ui-components";
 
 const TemplateSharePage: NextPage = () => {
   const router = useRouter();
@@ -25,7 +27,7 @@ const TemplateSharePage: NextPage = () => {
         className={refComponentHasWidth ? "screenshot-ready" : undefined}
       >
         {/* Place longest-to-load component here.
-          When the component is visible (has a width > 0) the screenshot-ready class will be
+          When the component is visible (has a width > 0) the screenshot-ready class will be 
           added to the box, signaling that the screenshot is ready to be captured. */}
         <Typography>{name}</Typography>
       </Box>

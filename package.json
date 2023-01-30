@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@actnowcoalition/actnow.js": "^0.0.2",
+    "@actnowcoalition/ui-components": "0.10.8",
     "@emotion/react": "^11.9.3",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.9.3",
