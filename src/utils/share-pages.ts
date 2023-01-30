@@ -8,7 +8,7 @@
 export function searchDomForClass<T extends (bool: boolean) => void>(
   element: Element,
   callback: T,
-  className = "component-loaded"
+  className = "act-now-component-loaded"
 ) {
   Array.from(element.children).forEach((child) => {
     searchDomForClass(child, callback);

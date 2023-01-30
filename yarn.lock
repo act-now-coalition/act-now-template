@@ -7,7 +7,7 @@
   resolved "https://registry.yarnpkg.com/@actnowcoalition/assert/-/assert-0.1.2.tgz#87f8d5e6e18194340d0101a2406b2b80b7ad56eb"
   integrity sha512-qseONebB+hBZbu4kgLh9Cv8p9DUQsIONChd9t2J6QdNS2NLjuItK1pXmjODTE31gKzsPIW42DL3KvUD7PS4YFw==
 
-"@actnowcoalition/metrics@^0.4.1":
+"@actnowcoalition/metrics@^0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@actnowcoalition/metrics/-/metrics-0.4.2.tgz#450a62a97367787ae5be5940fc39f20d4680086d"
   integrity sha512-yyIJ5RY/p5Z97t3mbzWzNxW0fOzg6KnlUfpE/Mq9lBBv+y0dQrlCg5Spc/js5Kk12ydSUrKeXH1Mkdf0omEHHQ==
@@ -29,7 +29,7 @@
   resolved "https://registry.yarnpkg.com/@actnowcoalition/number-format/-/number-format-0.1.3.tgz#6cffb3cda5c1d29228acd3a77d2bf28424ce0818"
   integrity sha512-FALygmT3/zV1TVG8c4tMVdj7GFjxUj2qMK2YbNjdvwPxPEvRHNwFyRtgB08NyQOduleL5MoxeDgju7pb8lz+ug==
 
-"@actnowcoalition/regions@^0.1.3", "@actnowcoalition/regions@^0.1.4":
+"@actnowcoalition/regions@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@actnowcoalition/regions/-/regions-0.1.4.tgz#ee91b49298c31f52e9eeccfcdd08689587747d5b"
   integrity sha512-EayohEW8IN3GxHs7p8nuNDl0cMR9rFXbcEUO3ZXacERDQQmzAbygwpFAxMeMF/wNEXOrGIDVsj9vHPTP//bVhA==
@@ -37,7 +37,7 @@
     "@actnowcoalition/assert" "^0.1.2"
     lodash "^4.17.21"
 
-"@actnowcoalition/time-utils@^0.1.2":
+"@actnowcoalition/time-utils@^0.1.2", "@actnowcoalition/time-utils@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@actnowcoalition/time-utils/-/time-utils-0.1.4.tgz#a63a0770596abf05819b5af47e359f22e7afcc60"
   integrity sha512-Td0cVPQP9CnkkS2JOk4RNe8FMsllYJR/8Ivf0Y+pLWQrzSpZ36DS6lECHsfeaLH+sZ3WTVbBamBNI17iupPgsg==
@@ -46,15 +46,16 @@
     "@types/luxon" "^2.3.2"
     luxon "^2.4.0"
 
-"@actnowcoalition/ui-components@^0.10.8":
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.10.8.tgz#823a7ee8ca32924585fecbd319d2c5873c0f6cbe"
-  integrity sha512-NqyDlu0546ONbZdsIqu+3JcvmcaCB2LI+UWhIiCnr++EJH0NRju4BxOIw9j1G8hJnGj8g0rVXQU+J6xMA4mE5A==
+"@actnowcoalition/ui-components@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.11.3.tgz#789d1163330613fe07903c8321cc3db0bb886d11"
+  integrity sha512-qYCuZrgT3+/5qGOQFfCvUiaCCHYXDB/Gc3tQ+zujj+UToHnFrwNytwlss8k/9IXleT+Dg06QhHtRzfrPUPHAeg==
   dependencies:
     "@actnowcoalition/assert" "^0.1.2"
-    "@actnowcoalition/metrics" "^0.4.1"
+    "@actnowcoalition/metrics" "^0.4.2"
     "@actnowcoalition/number-format" "^0.1.3"
-    "@actnowcoalition/regions" "^0.1.3"
+    "@actnowcoalition/regions" "^0.1.4"
+    "@actnowcoalition/time-utils" "^0.1.4"
     "@emotion/react" "^11.10.5"
     "@emotion/styled" "^11.10.5"
     "@mui/icons-material" "^5.8.4"
