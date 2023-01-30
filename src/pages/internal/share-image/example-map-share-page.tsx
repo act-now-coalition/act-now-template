@@ -21,7 +21,7 @@ import {
 import { regions } from "src/utils/regions";
 import { searchDomForClass } from "src/utils/share-pages";
 
-const MapPageSharePage: NextPage = () => {
+const ExampleMapSharePage: NextPage = () => {
   const router = useRouter();
   const ref = useRef<Element>(null);
 
@@ -67,4 +67,4 @@ const MapPageSharePage: NextPage = () => {
     </ScreenshotWrapper>
   );
 };
-export default MapPageSharePage;
+export default ExampleMapSharePage;

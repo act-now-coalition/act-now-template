@@ -41,12 +41,9 @@ const InternalHome: NextPage = () => {
         <Typography variant="h3">Share Image Pages</Typography>
         <List>
           <ListItem>
-            <Link href="/internal/share-image/TemplateSharePage?name=Template">
-              Template Page
+            <Link href="/internal/share-image/example-map-share-page?">
+              example-map
             </Link>
-          </ListItem>
-          <ListItem>
-            <Link href="/internal/share-image/MapPageSharePage?">MapPage</Link>
           </ListItem>
           {/* ADD SHARE PAGES HERE */}
           {/* Do not remove above comment. Plop uses it as a target 
