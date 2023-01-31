@@ -1,13 +1,13 @@
 import { Grid, Theme, useMediaQuery } from "@mui/material";
 
-import { Metric } from "@actnowcoalition/metrics";
-import { Region } from "@actnowcoalition/regions";
 import {
   AutoWidth,
+  Metric,
   MetricOverview,
   MetricSparklines,
+  Region,
   useMetricCatalog,
-} from "@actnowcoalition/ui-components";
+} from "@actnowcoalition/actnow.js";
 
 export interface MetricsOverviewBlockProps {
   /**

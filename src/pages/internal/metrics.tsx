@@ -15,8 +15,7 @@ import {
 } from "@mui/material";
 import type { NextPage } from "next";
 
-import { Metric } from "@actnowcoalition/metrics";
-import { useMetricCatalog } from "@actnowcoalition/ui-components";
+import { Metric, useMetricCatalog } from "@actnowcoalition/actnow.js";
 
 import { cms } from "../../cms";
 import { PageMetaTags } from "../../components/SocialMetaTags";

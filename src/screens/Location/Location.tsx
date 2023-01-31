@@ -1,6 +1,6 @@
 import { Grid, Typography } from "@mui/material";
 
-import { Region } from "@actnowcoalition/regions";
+import { Region } from "@actnowcoalition/actnow.js";
 
 import {
   BorderedPageSection,

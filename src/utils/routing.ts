@@ -1,4 +1,4 @@
-import type { Region } from "@actnowcoalition/regions";
+import type { Region } from "@actnowcoalition/actnow.js";
 
 /**
  * The URL prefix for all location pages. This must match the directory used for

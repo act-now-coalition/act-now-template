@@ -6,12 +6,12 @@ import isEmpty from "lodash/isEmpty";
 import { NextPage } from "next";
 import { useRouter } from "next/router";
 
-import { assert } from "@actnowcoalition/assert";
 import {
   MetricScoreOverview,
   MetricUSNationalMap,
+  assert,
   useMutationObserver,
-} from "@actnowcoalition/ui-components";
+} from "@actnowcoalition/actnow.js";
 
 import {
   MapShareWrapper,
@@ -55,9 +55,9 @@ const ExampleSharePage: NextPage = () => {
         <Placeholder sx={{ minHeight: "90px" }} width={"100%"} />
       </Stack>
       <Box ref={ref} className={isLoaded ? "screenshot-ready" : undefined}>
-        {/* Place slowest-to-load Metric-aware component here (like MetricUSNationalMap 
+        {/* Place slowest-to-load Metric-aware component here (like MetricUSNationalMap
             below). The mutation observer will detect when the component is loaded
-            and signal that the screenshot is ready to be taken. If not using 
+            and signal that the screenshot is ready to be taken. If not using
             any Metric-aware components, you can remove the mutation observer
             logic and just set the parent className to screenshot-ready.*/}
         <MapShareWrapper>
