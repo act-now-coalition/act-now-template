@@ -37,86 +37,6 @@
     swr "^1.3.0"
     topojson-client "^3.1.0"
 
-"@actnowcoalition/assert@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/assert/-/assert-0.1.2.tgz#87f8d5e6e18194340d0101a2406b2b80b7ad56eb"
-  integrity sha512-qseONebB+hBZbu4kgLh9Cv8p9DUQsIONChd9t2J6QdNS2NLjuItK1pXmjODTE31gKzsPIW42DL3KvUD7PS4YFw==
-
-"@actnowcoalition/metrics@^0.4.1":
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/metrics/-/metrics-0.4.2.tgz#450a62a97367787ae5be5940fc39f20d4680086d"
-  integrity sha512-yyIJ5RY/p5Z97t3mbzWzNxW0fOzg6KnlUfpE/Mq9lBBv+y0dQrlCg5Spc/js5Kk12ydSUrKeXH1Mkdf0omEHHQ==
-  dependencies:
-    "@actnowcoalition/assert" "^0.1.2"
-    "@actnowcoalition/number-format" "^0.1.3"
-    "@actnowcoalition/regions" "^0.1.4"
-    "@actnowcoalition/time-utils" "^0.1.2"
-    "@types/papaparse" "^5.3.3"
-    delay "^5.0.0"
-    lodash "^4.17.21"
-    node-fetch "^2.6.7"
-    p-limit "^3.1.0"
-    p-retry "^4.6.2"
-    papaparse "^5.3.2"
-
-"@actnowcoalition/number-format@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/number-format/-/number-format-0.1.3.tgz#6cffb3cda5c1d29228acd3a77d2bf28424ce0818"
-  integrity sha512-FALygmT3/zV1TVG8c4tMVdj7GFjxUj2qMK2YbNjdvwPxPEvRHNwFyRtgB08NyQOduleL5MoxeDgju7pb8lz+ug==
-
-"@actnowcoalition/regions@^0.1.3", "@actnowcoalition/regions@^0.1.4":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/regions/-/regions-0.1.4.tgz#ee91b49298c31f52e9eeccfcdd08689587747d5b"
-  integrity sha512-EayohEW8IN3GxHs7p8nuNDl0cMR9rFXbcEUO3ZXacERDQQmzAbygwpFAxMeMF/wNEXOrGIDVsj9vHPTP//bVhA==
-  dependencies:
-    "@actnowcoalition/assert" "^0.1.2"
-    lodash "^4.17.21"
-
-"@actnowcoalition/time-utils@^0.1.2":
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/time-utils/-/time-utils-0.1.4.tgz#a63a0770596abf05819b5af47e359f22e7afcc60"
-  integrity sha512-Td0cVPQP9CnkkS2JOk4RNe8FMsllYJR/8Ivf0Y+pLWQrzSpZ36DS6lECHsfeaLH+sZ3WTVbBamBNI17iupPgsg==
-  dependencies:
-    "@actnowcoalition/assert" "^0.1.2"
-    "@types/luxon" "^2.3.2"
-    luxon "^2.4.0"
-
-"@actnowcoalition/ui-components@0.10.8":
-  version "0.10.8"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/ui-components/-/ui-components-0.10.8.tgz#823a7ee8ca32924585fecbd319d2c5873c0f6cbe"
-  integrity sha512-NqyDlu0546ONbZdsIqu+3JcvmcaCB2LI+UWhIiCnr++EJH0NRju4BxOIw9j1G8hJnGj8g0rVXQU+J6xMA4mE5A==
-  dependencies:
-    "@actnowcoalition/assert" "^0.1.2"
-    "@actnowcoalition/metrics" "^0.4.1"
-    "@actnowcoalition/number-format" "^0.1.3"
-    "@actnowcoalition/regions" "^0.1.3"
-    "@emotion/react" "^11.10.5"
-    "@emotion/styled" "^11.10.5"
-    "@mui/icons-material" "^5.8.4"
-    "@mui/lab" "^5.0.0-alpha.111"
-    "@mui/material" "5.11.4"
-    "@types/d3-geo" "^2.0.2"
-    "@types/react-simple-maps" "^1.0.8"
-    "@types/topojson-client" "^3.1.1"
-    "@visx/axis" "^2.12.2"
-    "@visx/curve" "^2.1.0"
-    "@visx/event" "^2.6.0"
-    "@visx/grid" "^2.12.2"
-    "@visx/group" "^2.10.0"
-    "@visx/responsive" "^2.10.0"
-    "@visx/scale" "^2.2.2"
-    "@visx/shape" "^2.12.2"
-    "@visx/voronoi" "^2.10.0"
-    d3-geo "^2.0.2"
-    encoding "^0.1.13"
-    react-copy-to-clipboard "^5.1.0"
-    react-markdown "^8.0.3"
-    react-share "^4.4.0"
-    react-simple-maps "^3.0.0"
-    react-singleton-hook "^4.0.0"
-    swr "^1.3.0"
-    topojson-client "^3.1.0"
-
 "@ampproject/remapping@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@ampproject/remapping/-/remapping-2.2.0.tgz#56c133824780de3174aed5ab6834f3026790154d"
@@ -3197,21 +3117,7 @@
   resolved "https://registry.yarnpkg.com/@types/d3-color/-/d3-color-1.4.2.tgz#944f281d04a0f06e134ea96adbb68303515b2784"
   integrity sha512-fYtiVLBYy7VQX+Kx7wU/uOIkGQn8aAEY8oWMoyja3N4dLd8Yf6XgSIR/4yWvMuveNOH5VShnqCgRqqh/UNanBA==
 
-"@types/d3-geo@^1":
-  version "1.12.4"
-  resolved "https://registry.yarnpkg.com/@types/d3-geo/-/d3-geo-1.12.4.tgz#7fbd90b6fdb25e34ce4f557c0de73360d662850f"
-  integrity sha512-lNDaAuOaML6w2d1XE0Txr5YOXLBQSF1q2IU6eXh/u1TTPQSm2Ah+TMIub1+CIMq8J/7DOzi5Cr8/yHqjNvqLKA==
-  dependencies:
-    "@types/geojson" "*"
-
-"@types/d3-geo@^2.0.2":
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/@types/d3-geo/-/d3-geo-2.0.4.tgz#3e61a669d91cf12c88ce86ffac47bec23d97c8c1"
-  integrity sha512-kP0LcPVN6P/42hmFt0kZm93YTscfawZo6tioL9y0Ya2l5rxaGoYrIG4zee+yJoK9cLTOc8E8S5ExqTEYVwjIkw==
-  dependencies:
-    "@types/geojson" "*"
-
-"@types/d3-interpolate@^1", "@types/d3-interpolate@^1.3.1":
+"@types/d3-interpolate@^1.3.1":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@types/d3-interpolate/-/d3-interpolate-1.4.2.tgz#88902a205f682773a517612299a44699285eed7b"
   integrity sha512-ylycts6llFf8yAEs1tXzx2loxxzDZHseuhPokrqKprTQSTcD3JbJI1omZP1rphsELZO3Q+of3ff0ZS7+O6yVzg==
@@ -3230,11 +3136,6 @@
   dependencies:
     "@types/d3-time" "^2"
 
-"@types/d3-selection@^1":
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/@types/d3-selection/-/d3-selection-1.4.3.tgz#36928bbe64eb8e0bbcbaa01fb05c21ff6c71fa93"
-  integrity sha512-GjKQWVZO6Sa96HiKO6R93VBE8DUW+DDkFpIMf9vpY5S78qZTlRRSNUsHr/afDpF7TvLDV7VxrUFOWW7vdIlYkA==
-
 "@types/d3-shape@^1.3.1":
   version "1.3.8"
   resolved "https://registry.yarnpkg.com/@types/d3-shape/-/d3-shape-1.3.8.tgz#c3c15ec7436b4ce24e38de517586850f1fea8e89"
@@ -3251,14 +3152,6 @@
   version "1.1.9"
   resolved "https://registry.yarnpkg.com/@types/d3-voronoi/-/d3-voronoi-1.1.9.tgz#7bbc210818a3a5c5e0bafb051420df206617c9e5"
   integrity sha512-DExNQkaHd1F3dFPvGA/Aw2NGyjMln6E9QzsiqOcBgnE+VInYnFBHBBySbZQts6z6xD+5jTfKCP7M4OqMyVjdwQ==
-
-"@types/d3-zoom@^1":
-  version "1.8.3"
-  resolved "https://registry.yarnpkg.com/@types/d3-zoom/-/d3-zoom-1.8.3.tgz#00237900c6fdc2bb4fe82679ee4d74eb8fbe7b3c"
-  integrity sha512-3kHkL6sPiDdbfGhzlp5gIHyu3kULhtnHTTAl3UBZVtWB1PzcLL8vdmz5mTx7plLiUqOA2Y+yT2GKjt/TdA2p7Q==
-  dependencies:
-    "@types/d3-interpolate" "^1"
-    "@types/d3-selection" "^1"
 
 "@types/debug@^4.0.0":
   version "4.1.7"
@@ -3297,11 +3190,6 @@
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/@types/fined/-/fined-1.1.3.tgz#83f03e8f0a8d3673dfcafb18fce3571f6250e1bc"
   integrity sha512-CWYnSRnun3CGbt6taXeVo2lCbuaj4mchVJ4UF/BdU5TSuIn3AmS13pGMwCsBUoehGbhZrBrpNJZSZI5EVilXww==
-
-"@types/geojson@*":
-  version "7946.0.10"
-  resolved "https://registry.yarnpkg.com/@types/geojson/-/geojson-7946.0.10.tgz#6dfbf5ea17142f7f9a043809f1cd4c448cb68249"
-  integrity sha512-Nmh0K3iWQJzniTuPRcJn5hxXkfB1T1pgB89SBig5PlJQU5yocazeu4jATJlaA0GYFKWMqDdvYemoSnF2pXgLVA==
 
 "@types/glob@*", "@types/glob@^7.1.1":
   version "7.2.0"
@@ -3399,19 +3287,6 @@
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.184.tgz#23f96cd2a21a28e106dc24d825d4aa966de7a9fe"
   integrity sha512-RoZphVtHbxPZizt4IcILciSWiC6dcn+eZ8oX9IWEYfDMcocdd42f7NPI6fQj+6zI8y4E0L7gu2pcZKLGTRaV9Q==
 
-"@types/luxon@^2.3.2":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@types/luxon/-/luxon-2.4.0.tgz#897d3abc23b68d78b69d76a12c21e01eb5adab95"
-  integrity sha512-oCavjEjRXuR6URJEtQm0eBdfsBiEcGBZbq21of8iGkeKxU1+1xgKuFPClaBZl2KB8ZZBSWlgk61tH6Mf+nvZVw==
-
-"@types/material-ui@^0.21.12":
-  version "0.21.12"
-  resolved "https://registry.yarnpkg.com/@types/material-ui/-/material-ui-0.21.12.tgz#208e8b7e49a545bb704fa7e865986afde1b33384"
-  integrity sha512-rBY3iOr5LISKDLAYo3229R79xIPPKSOL2c7FzAFn5dUj38Oe7rQldYedHWsYmkJUeboE9Ipad7ppyJwBzXxrMw==
-  dependencies:
-    "@types/react" "*"
-    "@types/react-addons-linked-state-mixin" "*"
-
 "@types/mdast@^3.0.0":
   version "3.0.10"
   resolved "https://registry.yarnpkg.com/@types/mdast/-/mdast-3.0.10.tgz#4724244a82a4598884cbbe9bcfd73dff927ee8af"
@@ -3467,13 +3342,6 @@
   resolved "https://registry.yarnpkg.com/@types/npmlog/-/npmlog-4.1.4.tgz#30eb872153c7ead3e8688c476054ddca004115f6"
   integrity sha512-WKG4gTr8przEZBiJ5r3s8ZIAoMXNbOgQ+j/d5O4X3x6kZJRLNvyUJuUK/KoG3+8BaOHPhp2m7WC6JKKeovDSzQ==
 
-"@types/papaparse@^5.3.3":
-  version "5.3.7"
-  resolved "https://registry.yarnpkg.com/@types/papaparse/-/papaparse-5.3.7.tgz#8d3bf9e62ac2897df596f49d9ca59a15451aa247"
-  integrity sha512-f2HKmlnPdCvS0WI33WtCs5GD7X1cxzzS/aduaxSu3I7TbhWlENjSPs6z5TaB9K0J+BH1jbmqTaM+ja5puis4wg==
-  dependencies:
-    "@types/node" "*"
-
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -3499,13 +3367,6 @@
   resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.7.tgz#63bb7d067db107cc1e457c303bc25d511febf6cb"
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
-"@types/react-addons-linked-state-mixin@*":
-  version "0.14.22"
-  resolved "https://registry.yarnpkg.com/@types/react-addons-linked-state-mixin/-/react-addons-linked-state-mixin-0.14.22.tgz#a8fe5929bbfa10947f3bf62d4a878706ec6b7718"
-  integrity sha512-DF9utM6VjuIaY388R6XWWDs7CIDTH7on1k1yR+hqaL/T4/OqSCW5uij28APq9KI82CZf0/qtBJI+pjvXcOh0kQ==
-  dependencies:
-    "@types/react" "*"
-
 "@types/react-dom@18.0.6":
   version "18.0.6"
   resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.6.tgz#36652900024842b74607a17786b6662dd1e103a1"
@@ -3518,16 +3379,6 @@
   resolved "https://registry.yarnpkg.com/@types/react-is/-/react-is-17.0.3.tgz#2d855ba575f2fc8d17ef9861f084acc4b90a137a"
   integrity sha512-aBTIWg1emtu95bLTLx0cpkxwGW3ueZv71nE2YFBpL8k/z5czEW8yYpOo8Dp+UUAFAtKwNaOsh/ioSeQnWlZcfw==
   dependencies:
-    "@types/react" "*"
-
-"@types/react-simple-maps@^1.0.8":
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/@types/react-simple-maps/-/react-simple-maps-1.0.8.tgz#a21beb16cbeeadcb093a47de7888db64a2f103aa"
-  integrity sha512-gNXpQor+H0CCjp8GVNUeeTV+iDPdqFuCDIlYHH17KZ/tVHK1WaRIZl+s2ZnPCVQo27nEnRgU3GQxYbOYxXxgNQ==
-  dependencies:
-    "@types/d3-geo" "^1"
-    "@types/d3-zoom" "^1"
-    "@types/geojson" "*"
     "@types/react" "*"
 
 "@types/react-transition-group@^4.4.5":
@@ -3581,21 +3432,6 @@
   integrity sha512-FvnCJljyxhPM3gkRgWmxmDZyAQSiBQQWLI0A0VFL0K7W1oRUrPJSqNO0NvTnLkBcotdlp3lKvaT0JrnyRDkzOg==
   dependencies:
     "@types/node" "*"
-
-"@types/topojson-client@^3.1.1":
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/@types/topojson-client/-/topojson-client-3.1.1.tgz#d1396b2e79f530ef69bb162523cddf94576bd5a9"
-  integrity sha512-E4/Z2Xg56kVLRzYWem/6uOKVcVNqqxEqlWM9qCG2tCV1BxuzvvXC02/ELoGJWgtKkQhfycBPlMFEuTFdA/YiTg==
-  dependencies:
-    "@types/geojson" "*"
-    "@types/topojson-specification" "*"
-
-"@types/topojson-specification@*":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/topojson-specification/-/topojson-specification-1.0.2.tgz#e20df2c5a611e31f51d606473dbaccc1d90461c8"
-  integrity sha512-SGc1NdX9g3UGDp6S+p+uyG+Z8CehS51sUJ9bejA25Xgn2kkAguILk6J9nxXK+0M/mbTBN7ypMA7+4HVLNMJ8ag==
-  dependencies:
-    "@types/geojson" "*"
 
 "@types/uglify-js@*":
   version "3.16.0"

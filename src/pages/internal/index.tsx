@@ -1,4 +1,5 @@
 import {
+  Box,
   Breadcrumbs,
   Container,
   Link,
@@ -30,19 +31,40 @@ const InternalHome: NextPage = () => {
           </Link>
         </Breadcrumbs>
         <Typography variant="h1">Internal</Typography>
+        <Typography variant="paragraphLarge">
+          This internal page serves as a directory to other internal pages. Each
+          internal page comprehensively displays properties defined in your
+          codebase, including metrics, regions, and share pages you defined.
+        </Typography>
         <List>
           <ListItem>
-            <Link href="/internal/metrics">Metrics</Link>
+            <Box>
+              <Link href="/internal/metrics">Metrics</Link>
+              <br />
+              The <code>internal/metrics</code> page displays all defined
+              metrics included in your metric catalog. These metrics are located
+              in <code>src/utils/metrics.ts</code>.
+            </Box>
           </ListItem>
           <ListItem>
-            <Link href="/internal/regions">Regions</Link>
+            <Box>
+              <Link href="/internal/regions">Regions</Link>
+              <br />
+              The <code>internal/regions</code> page displays all links to your
+              region-specific pages. These regions are the ones in your region
+              database, which is instantiated in{" "}
+              <code>src/utils/regions.ts</code>. As a starting point, our{" "}
+              <code>@actnowcoalition/regions</code> package (included in this
+              template) comes with some predefined regions.
+            </Box>
           </ListItem>
         </List>
         <Typography variant="h3">Share Image Pages</Typography>
+        Pages used to generate share images for social media.
         <List>
           <ListItem>
-            <Link href="/internal/share-image/TemplateSharePage?name=Template">
-              Template Page
+            <Link href="/internal/share-image/example-share-page?">
+              example-map
             </Link>
           </ListItem>
           {/* ADD SHARE PAGES HERE */}
