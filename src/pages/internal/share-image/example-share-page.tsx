@@ -8,12 +8,16 @@ import { useRouter } from "next/router";
 
 import { assert } from "@actnowcoalition/assert";
 import {
-  MetricLineThresholdChart,
   MetricScoreOverview,
+  MetricUSNationalMap,
   useMutationObserver,
 } from "@actnowcoalition/ui-components";
 
-import { Placeholder, ScreenshotWrapper } from "components/Containers";
+import {
+  MapShareWrapper,
+  Placeholder,
+  ScreenshotWrapper,
+} from "components/Containers";
 import { regions } from "src/utils/regions";
 import { searchDomForClass } from "src/utils/share-pages";
 
@@ -56,12 +60,9 @@ const ExampleSharePage: NextPage = () => {
             and signal that the screenshot is ready to be taken. If not using 
             any Metric-aware components, you can remove the mutation observer
             logic and just set the parent className to screenshot-ready.*/}
-        <MetricLineThresholdChart
-          width={600}
-          height={400}
-          metric={metric}
-          region={regions.findByRegionIdStrict("12")}
-        />
+        <MapShareWrapper>
+          <MetricUSNationalMap metric={metric} regionDB={regions} />
+        </MapShareWrapper>
       </Box>
     </ScreenshotWrapper>
   );
