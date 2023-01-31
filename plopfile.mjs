@@ -6,35 +6,48 @@
 import _ from "lodash";
 
 const templateSharePage = prepareTemplate(`
-import { useResizeObserver } from "@actnowcoalition/ui-components"
-import { useRouter } from "next/router";
-import { NextPage } from "next";
+import { useRef, useState } from "react";
+
 import { Box } from "@mui/system";
 import isEmpty from "lodash/isEmpty";
+import { NextPage } from "next";
+import { useRouter } from "next/router";
+
+import { useMutationObserver } from "@actnowcoalition/ui-components";
+
+import { ScreenshotWrapper } from "components/Containers";
+import { searchDomForClass } from "src/utils/share-pages";
 
 const {{pascalCase name}}SharePage: NextPage = () => {
   const router = useRouter();
-  const { ref, observerEntry } = useResizeObserver();
-  const refComponentHasWidth =
-    observerEntry && observerEntry.contentRect.width > 0;
+  const ref = useRef<Element>(null);
+
+  const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const handleMutations: MutationCallback = (mutations: MutationRecord[]) => {
+    for (const mutation of mutations) {
+      if (mutation.type === "childList") {
+        searchDomForClass(mutation.target as Element, setIsLoaded);
+      }
+    }
+  };
+  useMutationObserver(ref, handleMutations, { childList: true, subtree: true });
 
   if (isEmpty(router.query)) {
-    return <span>Page loading or no query params were provided...</span>;
+    return <span>Page loading or no query params were provided. Expects params: {{queryParams}}</span>;
   }
   const { {{queryParams}} } = router.query;
   // Add an assertion that expected URL query params exist here.
 
   return (
-    <>
-      <Box
-        ref={ref}
-        className={refComponentHasWidth ? "screenshot-ready" : undefined}
-      >
-        {/* Place longest-to-load component here. 
-          When the component is visible (has a width > 0) the screenshot-ready class will be 
-          added to the box, signaling that the screenshot is ready to be captured. */}
+    <ScreenshotWrapper className="screenshot">
+      <Box ref={ref} className={isLoaded ? "screenshot-ready" : undefined}>
+        {/* Place slowest-to-load Metric-aware component here (like MetricUSNationalMap 
+            below). The mutation observer will detect when the component is loaded
+            and signal that the screenshot is ready to be taken. If not using 
+            any Metric-aware components, you can remove the mutation observer
+            logic and just set the parent className to screenshot-ready.*/}
       </Box>
-    </>
+    </ScreenshotWrapper>
   );
 };
 export default {{pascalCase name}}SharePage;
@@ -42,7 +55,7 @@ export default {{pascalCase name}}SharePage;
 
 const templateSharePageListItem = prepareTemplate(`
           <ListItem>
-            <Link href="/internal/share-image/{{pascalCase name}}SharePage?">{{name}}</Link>
+            <Link href="/internal/share-image/{{name}}-share-page?">{{name}}</Link>
           </ListItem>
           $1`);
 
@@ -55,8 +68,8 @@ export default function (/** @type {import('plop').NodePlopAPI} */ plop) {
       {
         type: "input",
         name: "name",
-        message: "Share page name",
-        example: "UsMap",
+        message: "Share page name in kebab-case.",
+        example: "us-map",
       },
       {
         type: "input",
@@ -68,7 +81,7 @@ export default function (/** @type {import('plop').NodePlopAPI} */ plop) {
     actions: [
       {
         type: "add",
-        path: `${internalPagePath}/share-image/{{pascalCase name}}SharePage.tsx`,
+        path: `${internalPagePath}/share-image/{{name}}-share-page.tsx`,
         template: templateSharePage,
       },
       {

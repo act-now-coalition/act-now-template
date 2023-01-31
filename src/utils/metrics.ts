@@ -19,6 +19,7 @@ export enum MetricId {
   PI = "pi",
   METRIC1 = "metric1",
   METRIC2 = "metric2",
+  DELAYED_METRIC = "delayed_metric",
   CSV_METRIC = "csv_metric",
 }
 
@@ -62,6 +63,16 @@ export const metrics: MetricDefinition[] = [
     dataReference: {
       providerId: "mock",
     },
+  },
+  {
+    id: MetricId.DELAYED_METRIC,
+    name: "Delayed Mock Metric",
+    dataReference: {
+      providerId: "mock",
+      delayMs: 5000,
+    },
+    categorySetId: "example-3-levels",
+    categoryThresholds: [1, 20],
   },
 
   // To create a metric using data from a CSV, uncomment / modify the following
