@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@actnowcoalition/actnow.js@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/@actnowcoalition/actnow.js/-/actnow.js-0.0.2.tgz#7632b96ea4593abb923f208fb96b2cd277bc169d"
-  integrity sha512-GJEQePQVpQ1f/yAfrm6wUyxewavX6I2QMpbbIfGdOXbVs5RBCHfpSGB2kpjXJAu0bUI8OUcuejdjknHgwx2Wpg==
+"@actnowcoalition/actnow.js@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@actnowcoalition/actnow.js/-/actnow.js-0.1.0.tgz#221da557a1ab21cac771695d817e1b3e3c300efd"
+  integrity sha512-48rilMl5vDuH/SawILRc+pIhzLfii8iaXJWbfeNwfuseEU0JFAwc+lQCDwThhWmxGoZTlUqb02UGD31YyaMV1Q==
   dependencies:
     "@emotion/react" "^11.10.5"
     "@emotion/styled" "^11.10.5"
