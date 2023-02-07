@@ -71,10 +71,6 @@ Using GitHub to authenticate CMS users requires a server handling the authentica
 
    The CMS interface will be available at `https://act-now-template.vercel.app/admin/`
 
-## Update Act Now Package Dependencies
-
-This template repository comes with a handy built-in script that automatically updates Act Now package dependencies. To update Act Now package dependencies, simply run the [update-act-now-packages.sh](https://github.com/act-now-coalition/act-now-template/blob/develop/update-act-now-packages.sh) script located in the root directory.
-
 ## Learn More
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
