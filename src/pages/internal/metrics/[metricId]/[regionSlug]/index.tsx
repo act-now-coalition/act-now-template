@@ -30,10 +30,13 @@ import { metricCatalog } from "src/utils/metrics";
 import { regions } from "src/utils/regions";
 import { getRegionSlug } from "src/utils/routing";
 
-const MetricPage: NextPage<{ regionId: string; metricId: string }> = ({
+const MetricPage: NextPage<{ regionId?: string; metricId?: string }> = ({
   regionId,
   metricId,
 }) => {
+  metricId = metricId ?? metricCatalog.metrics[0].id;
+  regionId = regionId ?? regions.all[0].regionId;
+
   const metric = metricCatalog.getMetric(metricId);
   const region = regions.findByRegionIdStrict(regionId);
   const metricFullName = metric.extendedName
@@ -178,14 +181,18 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = regions.all
-    .map((region) =>
-      metricCatalog.metrics.map((metric) => ({
-        params: { regionSlug: getRegionSlug(region), metricId: metric.id },
-      }))
-    )
-    .flat();
-  return { paths, fallback: false };
+  // Prerendering pages for all metric+region combinations is slow and can cause
+  // failed builds. So we use fallback rendering.
+  return { paths: [], fallback: true };
+
+  // const paths = regions.all
+  //   .map((region) =>
+  //     metricCatalog.metrics.map((metric) => ({
+  //       params: { regionSlug: getRegionSlug(region), metricId: metric.id },
+  //     }))
+  //   )
+  //   .flat();
+  // return { paths, fallback: false };
 };
 
 export default MetricPage;
