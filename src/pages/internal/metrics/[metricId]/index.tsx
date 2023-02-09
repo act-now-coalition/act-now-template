@@ -3,7 +3,14 @@ import {
   CircularProgress,
   Container,
   Link,
+  Paper,
   Stack,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
   Typography,
 } from "@mui/material";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
@@ -12,7 +19,7 @@ import { ParsedUrlQuery } from "querystring";
 import {
   Metric,
   MetricData,
-  Region,
+  MultiRegionMultiMetricDataStore,
   isoDateOnlyString,
   useDataForRegionsAndMetrics,
 } from "@actnowcoalition/actnow.js";
@@ -90,55 +97,79 @@ const MetricPage: NextPage<{ metricId: string }> = ({ metricId }) => {
             </Typography>
           </Stack>
         )}
-        {data && (
-          <ul>
-            {regions.all.map((region) => (
-              <li key={region.regionId}>
-                <RegionDataInfo
-                  region={region}
-                  metric={metric}
-                  data={data.metricData(region, metric)}
-                />
-              </li>
-            ))}
-          </ul>
+        {data ? (
+          <RegionDataTable data={data} metric={metric} />
+        ) : (
+          <CircularProgress />
         )}
-        {!data && !error && <CircularProgress />}
       </Container>
     </>
   );
 };
 
-const RegionDataInfo = ({
-  metric,
-  region,
+const RegionDataTable = ({
   data,
+  metric,
 }: {
+  data: MultiRegionMultiMetricDataStore;
   metric: Metric;
-  region: Region;
-  data: MetricData;
 }) => {
-  let dataInfo = "";
-  if (data.currentValue) {
-    dataInfo = " (value = " + data.formatValue();
-    if (data.hasTimeseries() && data.timeseries.hasData()) {
-      const ts = data.timeseries;
-      dataInfo += `, minDate=${isoDateOnlyString(
-        ts.minDate
-      )}, maxDate=${isoDateOnlyString(ts.maxDate)}, length=${ts.length}`;
-    }
-    dataInfo += ")";
-  } else {
-    dataInfo = " (no data)";
-  }
-
   return (
-    <Stack direction="row" spacing={1}>
-      <Link href={`/internal/metrics/${metric.id}/${getRegionSlug(region)}`}>
-        {region.fullName}
-      </Link>
-      <Typography>{dataInfo}</Typography>
-    </Stack>
+    <TableContainer component={Paper}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Region</TableCell>
+            <TableCell align="right">Value</TableCell>
+            <TableCell align="right">Min Date</TableCell>
+            <TableCell align="right">Max Date</TableCell>
+            <TableCell align="right">Length</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {regions.all.map((region) => (
+            <RegionDataRow
+              key={region.regionId}
+              data={data.metricData(region, metric)}
+            />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+};
+
+const RegionDataRow = ({ data }: { data: MetricData }) => {
+  const ts = data.timeseries;
+  return (
+    <TableRow
+      key={data.region.regionId}
+      sx={{
+        "&:last-child td, &:last-child th": { border: 0 },
+      }}
+    >
+      <TableCell component="th" scope="row">
+        <Link
+          href={`/internal/metrics/${data.metric.id}/${getRegionSlug(
+            data.region
+          )}`}
+        >
+          {data.region.fullName}
+        </Link>
+      </TableCell>
+      <TableCell align="right">
+        {data.currentValue ? data.formatValue() : "no data"}
+      </TableCell>
+      {!ts.hasData() ? (
+        <TableCell colSpan={3}>no timeseries</TableCell>
+      ) : (
+        <>
+          <TableCell align="right">{isoDateOnlyString(ts.minDate)}</TableCell>
+          <TableCell align="right">{isoDateOnlyString(ts.maxDate)}</TableCell>
+          <TableCell align="right">{ts.length}</TableCell>
+        </>
+      )}
+    </TableRow>
   );
 };
 

@@ -17,6 +17,7 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { ParsedUrlQuery } from "querystring";
 
 import {
+  MetricData,
   MetricLineChart,
   MetricLineThresholdChart,
   isoDateOnlyString,
@@ -130,33 +131,7 @@ const MetricPage: NextPage<{ regionId?: string; metricId?: string }> = ({
                   <Typography variant="h3" mt={2} mb={1}>
                     Raw Data
                   </Typography>
-                  <TableContainer component={Paper} sx={{ width: 300 }}>
-                    <Table>
-                      <TableHead>
-                        <TableRow>
-                          <TableCell>Date</TableCell>
-                          <TableCell align="right">Value</TableCell>
-                        </TableRow>
-                      </TableHead>
-                      <TableBody>
-                        {data.timeseries.points.map((row) => (
-                          <TableRow
-                            key={row.date.toISOString()}
-                            sx={{
-                              "&:last-child td, &:last-child th": { border: 0 },
-                            }}
-                          >
-                            <TableCell component="th" scope="row">
-                              {isoDateOnlyString(row.date)}
-                            </TableCell>
-                            <TableCell align="right">
-                              {metric.formatValue(row.value)}
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </TableContainer>
+                  <DataTable data={data} />
                 </Stack>
               )}
             </Typography>
@@ -166,6 +141,38 @@ const MetricPage: NextPage<{ regionId?: string; metricId?: string }> = ({
         {!data && !error && <CircularProgress />}
       </Container>
     </>
+  );
+};
+
+const DataTable = ({ data }: { data: MetricData }) => {
+  return (
+    <TableContainer component={Paper} sx={{ width: 300 }}>
+      <Table>
+        <TableHead>
+          <TableRow>
+            <TableCell>Date</TableCell>
+            <TableCell align="right">Value</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {data.timeseries.points.map((row) => (
+            <TableRow
+              key={row.date.toISOString()}
+              sx={{
+                "&:last-child td, &:last-child th": { border: 0 },
+              }}
+            >
+              <TableCell component="th" scope="row">
+                {isoDateOnlyString(row.date)}
+              </TableCell>
+              <TableCell align="right">
+                {data.metric.formatValue(row.value)}
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
 };
 
